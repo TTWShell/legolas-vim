@@ -129,6 +129,15 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 syntax on
 let &colorcolumn=80
 
+" Ctrl-j 切换到下方的分割窗口 - Ctrl-k 切换到上方的分割窗口 - Ctrl-l
+" 切换到右侧的分割窗口 - Ctrl-h 切换到左侧的分割窗口
+"split navigations
+set splitbelow
+set splitright
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " ignore compiled files
 set wildignore=*.o,*~,*.pyc
