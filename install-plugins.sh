@@ -8,6 +8,6 @@ function echoo {
 
 cp vimrc $HOME/.vimrc
 
-vim +PluginInstall +qall
+sudo vim +PluginInstall +qall
 
 echoo "SUCCESS!"
