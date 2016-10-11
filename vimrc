@@ -17,6 +17,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Syntastic is a syntax checking plugin for Vim
 Plugin 'scrooloose/syntastic'
 
+" auto check python use pep8
+Plugin 'nvie/vim-flake8'
+
 " Highlights trailing whitespace in red and provides
 Plugin 'bronson/vim-trailing-whitespace'
 
