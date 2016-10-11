@@ -13,11 +13,11 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
 自动安装插件并编译ycm依赖：
 
-    sudo bash install-plugins.sh init  # init 是用于初始化的
+    sudo bash install-plugins.sh init  # init 是用于初始化的
 
 后续更新插件则只需要（自动清理不使用的插件）：
 
-     sudo bash install-plugins.sh
+    sudo bash install-plugins.sh
 
 
 # 快捷键说明
