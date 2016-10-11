@@ -101,5 +101,5 @@ set background=dark        " Assume a dark background
 if has('gui_running')
     colorscheme solarized
 else
-    colorscheme zenburn
+    colorscheme molokai
 endif
