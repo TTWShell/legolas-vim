@@ -7,7 +7,15 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
 以上部分使用各平台脚本可自动安装。例如，在ubuntu系统上，运行以下命令即可：
 
-    sudo bash init-vim-ubuntu.sh
+    sudo bash init-vim-ubuntu.sh  # 自动编译vim
+    
+自动安装插件并编译ycm依赖：
+
+    sudo bash install-plugins.sh init  # init 是用于初始化的，后续画更新插件则只需要 sudo bash install-plugins.sh
+    
+# 快捷键说明
+
+    Ctrl + T  ＃ 打开or关闭目录书
 
 # 相关文档
 
