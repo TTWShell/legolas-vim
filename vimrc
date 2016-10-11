@@ -36,6 +36,8 @@ Plugin 'Valloric/YouCompleteMe'
 " tree explore plugin
 Plugin 'scrooloose/nerdtree'
 
+" show venv、git branch、file
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Syntaxes
 Plugin 'Glench/Vim-Jinja2-Syntax'
@@ -138,3 +140,11 @@ endif
 
 " 目录树快捷键
 map <C-t> :NERDTreeToggle<CR>
+
+" for powerline
+set laststatus=2
+set term=xterm-256color
+set termencoding=utf-8
+set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
+" set guifont=Ubuntu\ Mono
+let g:Powerline_symbols = 'fancy'
