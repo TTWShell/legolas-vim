@@ -42,6 +42,9 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " enhance za
 Plugin 'tmhedberg/SimpylFold'
 
+" super search
+Plugin 'kien/ctrlp.vim'
+
 " Syntaxes
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'cstrahan/vim-capnp'
