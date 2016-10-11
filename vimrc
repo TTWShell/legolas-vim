@@ -30,6 +30,10 @@ Plugin 'jnurmine/Zenburn'
 " best auto complete tool I have ever used(jedi, supertab...)
 Plugin 'Valloric/YouCompleteMe'
 
+" tree explore plugin
+Plugin 'scrooloose/nerdtree'
+
+
 " Syntaxes
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'cstrahan/vim-capnp'
@@ -128,3 +132,6 @@ if has('gui_running')
 else
     colorscheme molokai
 endif
+
+" 目录树快捷键
+map <C-t> :NERDTreeToggle<CR>

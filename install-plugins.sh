@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
 
+function update {
+    cp vimrc $HOME/.vimrc
+    sudo vim +PluginInstall +qall
+}
 
-function echoo {
-    echo -e "\n\033[32m $1 \033[0m"
+function init {
+    update;
+    cd ~/.vim/bundle/YouCompleteMe && sudo ./install.py --clang-completer
 }
 
 
-cp vimrc $HOME/.vimrc
-
-sudo vim +PluginInstall +qall
-
-cd ~/.vim/bundle/YouCompleteMe && sudo ./install.py --clang-completer
+if [[ $1 = "init" ]]; then
+    init;
+else
+    update;
+fi
 
