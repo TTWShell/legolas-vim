@@ -10,4 +10,5 @@ cp vimrc $HOME/.vimrc
 
 sudo vim +PluginInstall +qall
 
-echoo "SUCCESS!"
+cd ~/.vim/bundle/YouCompleteMe && sudo ./install.py --clang-completer
+

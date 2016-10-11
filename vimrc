@@ -27,6 +27,9 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
 
+" best auto complete tool I have ever used(jedi, supertab...)
+Plugin 'Valloric/YouCompleteMe'
+
 " Syntaxes
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'cstrahan/vim-capnp'
@@ -89,13 +92,35 @@ cmap w!! w !sudo tee % >/dev/null
                 \ "passive_filetypes": []}
 
 
+" YouCompleteMe settings
+" youcompleteme
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
+" 输入第2个字符开始补全
+let g:ycm_min_num_of_chars_for_completion=2
+" 禁止缓存匹配项,每次都重新生成匹配项
+let g:ycm_cache_omnifunc=0
+" 开启语义补全
+let g:ycm_seed_identifiers_with_syntax=1
+" 在注释输入中也能补全
+let g:ycm_complete_in_comments = 1
+" 在字符串输入中也能补全
+let g:ycm_complete_in_strings = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_filetype_whitelist = { 'python': 1 }
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+
 """""""""""""""""""""""""""""""""""""""""""""
 "              Vim UI                       "
 """""""""""""""""""""""""""""""""""""""""""""
 syntax on
+let &colorcolumn=80
+
 
 " ignore compiled files
 set wildignore=*.o,*~,*.pyc
+
 
 set background=dark        " Assume a dark background
 if has('gui_running')

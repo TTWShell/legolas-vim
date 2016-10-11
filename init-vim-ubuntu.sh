@@ -30,7 +30,9 @@ cd ~ && rm -rf vim && git clone https://github.com/vim/vim.git && cd vim
 ./configure --with-features=huge \
             --enable-multibyte \
             --enable-pythoninterp \
-            --enable-python3interp \
+	    #--with-python-config-dir=/usr/lib/python2.7/config \
+            --enable-python3interp \ 
+            #--with-python3-config-dir=/usr/lib/python3.4/config \
             --with-mac-arch=x86_64 \
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
 make VIMRUNTIMEDIR=/usr/share/vim/vim80
@@ -40,4 +42,3 @@ echoo ">>> Set up Vundle..."
 sudo rm -rf ~/.vim/bundle/Vundle.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-echoo "SUCCESS"
