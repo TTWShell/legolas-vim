@@ -29,6 +29,7 @@ Plugin 'terryma/vim-multiple-cursors'
 "" Colorthemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
+Plugin 'flazz/vim-colorschemes'
 
 " best auto complete tool I have ever used(jedi, supertab...)
 Plugin 'Valloric/YouCompleteMe'

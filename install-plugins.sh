@@ -9,6 +9,7 @@ function update {
 function init {
     pip install flake8  # for vim-flake8
     update;
+    cp ～／.vim/bundle/vim-colorschemes/colors/* ~/.vim/colors
     cd ~/.vim/bundle/YouCompleteMe && sudo ./install.py --clang-completer
 }
 
