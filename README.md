@@ -22,6 +22,11 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
     sudo bash install-plugins.sh init  # init 是用于初始化的
 
+**注意**：
+
+安装过程中打开vim会提示找不到syntax.vim或者配色。
+syntax做一下ln s 操作即可。配色安装完毕会自动解决。
+
 后续更新插件则只需要（自动清理不使用的插件）：
 
     sudo bash install-plugins.sh
@@ -40,6 +45,13 @@ mac上有好用的brew。可以直接安装8.0以上版本的vim。
     bash init-vim-osx.sh
 
 后续安装同ubuntu环境。
+
+OSX 特别注意：
+
+1. 由于并没有直接替换系统自带的vim。所以其他需要vim支持的工具需要修改配置。例如git：
+
+    git config --global core.editor "/usr/local/bin/vim"
+
 
 
 # 快捷键说明
