@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Init vim in Ubuntu
+# Init vim in Mac OSX
 function echoo {
     echo -e "\n\033[32m $1 \033[0m"
 }
@@ -12,10 +12,12 @@ for i in $HOME/.vim $HOME/.vimrc; do
     [ -e $i ] && sudo mv $i $i.$today; 
 done
 
+echoo ">>> Install cmake using brew ..."
+brew install cmake
 
-echoo ">>> install vim use brew..."
+echoo ">>> install vim using brew ..."
 brew install vim
 
-echoo ">>> Set up Vundle..."
+echoo ">>> Set up Vundle ..."
 sudo rm -rf ~/.vim/bundle/Vundle.vim
 sudo git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

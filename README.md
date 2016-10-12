@@ -44,7 +44,9 @@ mac上有好用的brew。可以直接安装8.0以上版本的vim。
 
     bash init-vim-osx.sh
 
-后续安装同ubuntu环境。
+后续安装同ubuntu环境:
+
+    sudo bash install-plugins.sh init  # init 是用于初始化的，非初次安装去掉init命令
 
 OSX 特别注意：
 
