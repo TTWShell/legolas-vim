@@ -35,7 +35,7 @@ cd ~ && rm -rf vim && git clone https://github.com/vim/vim.git && cd vim
             #--with-python3-config-dir=/usr/lib/python3.4/config \
             --with-mac-arch=x86_64 \
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
-make VIMRUNTIMEDIR=/usr/share/vim/vim80
+make VIMRUNTIMEDIR=/usr/local/share/vim/vim80
 sudo make install
 
 echoo ">>> Set up Vundle ..."
