@@ -30,6 +30,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
     Ctrl-l  # 切换到右侧的分割窗口
     Ctrl-k  # 切换到上方的分割窗口
 
+    F2  # 打开or关闭行号
     F7  # flake8 check
 
     Ctrl+t  # 打开or关闭目录树

@@ -87,6 +87,8 @@ set encoding=utf-8
 set fencs=utf-8,gb2312,gbk     " Sets the default encoding
 filetype plugin indent on      " Automatically detect file types.
 set nu
+" toggle line number
+map <F2> :set number!<cR>
 
 " For when you forget to sudo.. Really Write the file.
 cmap w!! w !sudo tee % >/dev/null
