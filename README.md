@@ -7,7 +7,14 @@
 
 vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
-以上部分使用各平台脚本可自动安装。例如，在ubuntu系统上，运行以下命令即可：
+以上部分使用各平台脚本可自动安装。
+
+由于是为python开发打造。默认安装了pip等py开发必需品。公用开发工具默认安装（brew、zsh等）。
+
+
+## Ubuntu
+
+在ubuntu系统上，运行以下命令即可：
 
     sudo bash init-vim-ubuntu.sh  # 自动编译vim
 
@@ -18,6 +25,21 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 后续更新插件则只需要（自动清理不使用的插件）：
 
     sudo bash install-plugins.sh
+
+## Mac osx
+
+mac上有好用的brew。可以直接安装8.0以上版本的vim。
+
+前提配置（需要安装了brew，可参考[Mac环境配置及python包安装的那些坑](http://www.ttwshell.com/article/mac-env-and-python-package-install-errors.html)）：
+
+    brew update
+    export PATH=/usr/local/bin:$PATH  # 在／etc/profile 添加一下语句（使用zsh的在~/.zshrc添加即可）
+
+直接运行命令初始化vim环境：
+
+    bash init-vim-osx.sh
+
+后续安装同ubuntu环境。
 
 
 # 快捷键说明
