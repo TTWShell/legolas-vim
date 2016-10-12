@@ -32,6 +32,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
     F2  # 打开or关闭行号
     F7  # flake8 check
+    F12  # 打开or关闭复制支持
 
     Ctrl+t  # 打开or关闭目录树
 

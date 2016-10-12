@@ -90,6 +90,9 @@ set nu
 " toggle line number
 map <F2> :set number!<cR>
 
+" toggle paste
+set pastetoggle=<F12>
+
 " For when you forget to sudo.. Really Write the file.
 cmap w!! w !sudo tee % >/dev/null
 
