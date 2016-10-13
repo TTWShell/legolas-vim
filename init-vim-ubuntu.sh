@@ -37,8 +37,3 @@ cd ~ && rm -rf vim && git clone https://github.com/vim/vim.git && cd vim
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
 make VIMRUNTIMEDIR=/usr/local/share/vim/vim80
 sudo make install
-
-echoo ">>> Set up Vundle ..."
-sudo rm -rf ~/.vim/bundle/Vundle.vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
