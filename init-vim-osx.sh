@@ -17,3 +17,6 @@ brew install cmake
 
 echoo ">>> install vim using brew ..."
 brew install vim
+
+echoo ">>> install ctags using brew ...(for tarlist)"
+brew install ctags
