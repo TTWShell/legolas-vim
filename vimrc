@@ -165,9 +165,9 @@ endif
 map <C-t> :NERDTreeToggle<CR>
 " NERDTree settings
 " 是否显示隐藏文件
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden=0
 " 忽略一下文件的显示
-let NERDTreeIgnore=['\.pyc','\~$','\.swp','__pycache__']
+let NERDTreeIgnore=['\.pyc','\~$','\.swp','__pycache__','\.git$','\.DS_Store']
 " NERDTree git 扩展
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
