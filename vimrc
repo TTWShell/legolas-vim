@@ -37,6 +37,7 @@ Plugin 'Valloric/YouCompleteMe'
 
 " tree explore plugin
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " show venv、git branch、file
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -162,6 +163,24 @@ endif
 
 " 目录树快捷键
 map <C-t> :NERDTreeToggle<CR>
+" NERDTree settings
+" 是否显示隐藏文件
+let NERDTreeShowHidden=1
+" 忽略一下文件的显示
+let NERDTreeIgnore=['\.pyc','\~$','\.swp','__pycache__']
+" NERDTree git 扩展
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
+
 
 " for powerline
 set laststatus=2
