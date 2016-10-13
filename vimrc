@@ -153,8 +153,6 @@ nnoremap <C-H> <C-W><C-H>
 " ignore compiled files
 set wildignore=*.o,*~,*.pyc
 
-
-set background=dark        " Assume a dark background
 " 目录树快捷键
 map <C-t> :NERDTreeToggle<CR>
 " NERDTree settings
@@ -175,7 +173,6 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
-
 " for powerline
 set laststatus=2
 set term=xterm-256color
@@ -185,13 +182,12 @@ set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
 let g:Powerline_symbols = 'fancy'
 
 " color scheme
+set background=dark        " Assume a dark background
 if has('gui_running')
     colorscheme solarized
 else
     colorscheme molokai
 endif
-
-
 
 " 自定义代码折叠，折叠（和取消折叠）
 nnoremap <space> za
