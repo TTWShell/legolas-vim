@@ -37,3 +37,6 @@ cd ~ && rm -rf vim && git clone https://github.com/vim/vim.git && cd vim
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
 make VIMRUNTIMEDIR=/usr/local/share/vim/vim80
 sudo make install
+
+# for plugins tag-misc, easy-tag, tagbar
+sudo apt-get install exuberant-ctags
