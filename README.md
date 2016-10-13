@@ -67,8 +67,9 @@ OSX 特别注意：
     Ctrl-k  # 切换到上方的分割窗口
 
     F2  # 打开or关闭行号
+    F3  # 打开or关闭复制支持
+    F4  # 折叠or展开代码
     F7  # flake8 check
-    F12  # 打开or关闭复制支持
 
     Ctrl+t  # 打开or关闭目录树
 

@@ -94,7 +94,7 @@ set nu
 map <F2> :set number!<cR>
 
 " toggle paste
-set pastetoggle=<F12>
+set pastetoggle=<F3>
 
 " For when you forget to sudo.. Really Write the file.
 cmap w!! w !sudo tee % >/dev/null
@@ -192,4 +192,14 @@ let g:Powerline_symbols = 'fancy'
 
 " 自定义代码折叠，折叠（和取消折叠）
 nnoremap <space> za
-
+map <F4> :call ToggleFold()<CR>
+let myVarFolded = 1
+function! ToggleFold()
+  if(g:myVarFolded == 0)
+      exec "normal! zM"
+      let g:myVarFolded = 1
+  else
+      exec "normal! zR"
+      let g:myVarFolded = 0
+  endif
+endfunction
