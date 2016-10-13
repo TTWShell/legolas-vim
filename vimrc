@@ -64,7 +64,9 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'unblevable/quick-scope'
 Plugin 'elzr/vim-json'
 Plugin 'dyng/ctrlsf.vim'
-
+Plugin 'majutsushi/tagbar'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -133,6 +135,12 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_filetype_whitelist = { 'python': 1 }
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+" ctag and tagbar settings
+" toggle tagbar
+nnoremap <F8> :UpdateTags<CR>:TagbarToggle<CR>
+
+" auto update tagfile when save
+au BufWritePost *.py silent! :UpdateTags
 
 """""""""""""""""""""""""""""""""""""""""""""
 "              Vim UI                       "
@@ -192,4 +200,3 @@ let g:Powerline_symbols = 'fancy'
 
 " 自定义代码折叠，折叠（和取消折叠）
 nnoremap <space> za
-
