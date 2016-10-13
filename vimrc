@@ -155,12 +155,6 @@ set wildignore=*.o,*~,*.pyc
 
 
 set background=dark        " Assume a dark background
-if has('gui_running')
-    colorscheme solarized
-else
-    colorscheme molokai
-endif
-
 " 目录树快捷键
 map <C-t> :NERDTreeToggle<CR>
 " NERDTree settings
@@ -189,6 +183,15 @@ set termencoding=utf-8
 set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
 " set guifont=Ubuntu\ Mono
 let g:Powerline_symbols = 'fancy'
+
+" color scheme
+if has('gui_running')
+    colorscheme solarized
+else
+    colorscheme molokai
+endif
+
+
 
 " 自定义代码折叠，折叠（和取消折叠）
 nnoremap <space> za
