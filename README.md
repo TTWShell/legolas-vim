@@ -74,6 +74,9 @@ OSX 特别注意：
 
     space  # 折叠/展开代码
 
+    Shift-i  # 目录是否显示隐藏文件（NERDTree）。便于git开发，默认永远不显示.git。
+
+
 # 相关文档
 
 1. [Building-Vim-from-source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
