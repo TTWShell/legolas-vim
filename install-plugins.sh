@@ -7,7 +7,7 @@ function update {
 }
 
 function init {
-    echoo ">>> Set up Vundle ..."
+    echo ">>> Set up Vundle ..."
     sudo rm -rf ~/.vim/bundle/Vundle.vim
     sudo git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
