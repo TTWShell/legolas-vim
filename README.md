@@ -66,6 +66,7 @@ OSX 特别注意：
     Ctrl-j  # 切换到下方的分割窗口
     Ctrl-l  # 切换到右侧的分割窗口
     Ctrl-k  # 切换到上方的分割窗口
+    Ctrl-g  # 打开tagbar并且光标定位到相应的tag
 
     tab 切换使用ngt即可。例如切换到第二个tab页，输入2gt。
 
@@ -75,7 +76,7 @@ OSX 特别注意：
     F7  # flake8 check
     F8  # 打开or关闭函数列表
 
-    Ctrl+t  # 打开or关闭目录树
+    Ctrl-t  # 打开or关闭目录树
 
     space  # 折叠/展开代码
 

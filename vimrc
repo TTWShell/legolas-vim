@@ -138,6 +138,8 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " ctag and tagbar settings
 " toggle tagbar
 nnoremap <F8> :UpdateTags<CR>:TagbarToggle<CR>
+" open tagbar and jump to corresponding tag
+nnoremap <C-G> :TagbarOpen fj<CR>
 
 " auto update tagfile when save
 au BufWritePost *.py silent! :UpdateTags
