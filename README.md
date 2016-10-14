@@ -55,6 +55,10 @@ OSX 特别注意：
     git config --global core.editor "/usr/local/bin/vim"
 
 
+# 关于字体：[powerline-fonts](https://github.com/powerline/fonts)已经去掉了monaco_for_powerline。但是iterm2默认字体monaco非常好看，为了使用monaco并解决特殊符号乱码问题，所以Backup了一份。执行以下命令即可：
+
+    cd fonts && bash install-fonts.sh
+
 
 # 快捷键说明
 
