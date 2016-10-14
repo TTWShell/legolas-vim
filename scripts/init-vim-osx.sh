@@ -8,8 +8,8 @@ function echoo {
 echoo ">>> Backing up old vim configs"
 
 today=`date +%Y%m%d`
-for i in $HOME/.vim $HOME/.vimrc; do 
-    [ -e $i ] && sudo mv $i $i.$today; 
+for i in $HOME/.vim $HOME/.vimrc; do
+    [ -e $i ] && sudo mv $i $i.$today;
 done
 
 echoo ">>> Install cmake using brew ..."

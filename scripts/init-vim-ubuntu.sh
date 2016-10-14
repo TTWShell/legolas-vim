@@ -8,8 +8,8 @@ function echoo {
 echoo ">>> Backing up old vim configs"
 
 today=`date +%Y%m%d`
-for i in $HOME/.vim $HOME/.vimrc; do 
-    [ -e $i ] && mv $i $i.$today; 
+for i in $HOME/.vim $HOME/.vimrc; do
+    [ -e $i ] && mv $i $i.$today;
 done
 
 
@@ -31,7 +31,7 @@ cd ~ && rm -rf vim && git clone https://github.com/vim/vim.git && cd vim
             --enable-multibyte \
             --enable-pythoninterp \
 	    #--with-python-config-dir=/usr/lib/python2.7/config \
-            --enable-python3interp \ 
+            --enable-python3interp \
             #--with-python3-config-dir=/usr/lib/python3.4/config \
             --with-mac-arch=x86_64 \
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
