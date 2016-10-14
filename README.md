@@ -3,7 +3,7 @@
 
 # IDE环境配置
 
-支持Python自动补全的最好插件是YouCompleteMe。而YouCompleteMe需要比较高版本的vim，所以，需要编译安装vim，参见相关文档[1]。另外还需要一些C库，参见相关文档[2]。
+支持Python自动补全的最好插件是YouCompleteMe。而YouCompleteMe需要比较高版本的vim(>=7.4.143)，所以，需要编译安装vim，参见相关文档[1]。另外还需要一些C库，参见相关文档[2]。
 
 vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
@@ -54,8 +54,20 @@ OSX 特别注意：
 
     git config --global core.editor "/usr/local/bin/vim"
 
+## Centos
 
-# 关于字体：[powerline-fonts](https://github.com/powerline/fonts)已经去掉了monaco_for_powerline。但是iterm2默认字体monaco非常好看，为了使用monaco并解决特殊符号乱码问题，所以Backup了一份。执行以下命令即可：
+本人使用的是cento7.2。vim版本已经能满足需求了。不需要单独升级，只需要安装依赖即可。vim的编译安装请参考官方文档。
+
+    sudo bash init-vim-centos.sh
+
+后续安装同ubuntu、osx：
+
+    sudo bash install-plugins.sh init  # init 是用于初始化的，非初次安装去掉init命令
+
+
+# 关于字体
+
+[powerline-fonts](https://github.com/powerline/fonts)已经去掉了monaco_for_powerline。但是iterm2默认字体monaco非常好看，为了使用monaco并解决特殊符号乱码问题，所以Backup了一份。执行以下命令即可：
 
     cd fonts && bash install-fonts.sh
 
