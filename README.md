@@ -12,7 +12,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
 **支持Ubuntu（自动编译最新版vim）、centos（默认使用系统自带vim，用户可能需要自行升级，可参考ubuntu脚本）、Mac OSX（默认基于brew安装新版vim）**，一键安装：
 
-    cd ~ && rm -rf legolas-vim && git clone https://github.com/TTWShell/legolas-vim.git && cd legolas-vim $$ bash install.sh
+    cd ~ && rm -rf legolas-vim && git clone https://github.com/TTWShell/legolas-vim.git && cd legolas-vim && bash install.sh
 
 如果用户修改了vimrc配置文件，运行以下命令更新即可：
 
