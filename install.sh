@@ -6,6 +6,15 @@ function echoo {
 }
 
 
+# backup
+echoo ">>> Backing up old vim configs"
+
+today=`date +%Y%m%d`
+for i in $HOME/.vim $HOME/.vimrc; do
+    [ -e $i ] && sudo mv $i $i.$today;
+done
+
+
 platform=""
 for i in "Centos","Centos" "Ubuntu","Ubuntu" "Darwin","MacOSX"; do
 	key=${i%,*}; value=${i#*,};
@@ -27,8 +36,9 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
             sudo bash scripts/init-vim-ubuntu.sh
             ;;
         MacOSX)
-echo "ssss"
             bash scripts/init-vim-osx.sh
+            echoo ">>> Install fonts for powerline ..."
+            bash fonts/install-fonts.sh
     esac
     sudo bash install-plugins.sh init
     echoo "Install finished."

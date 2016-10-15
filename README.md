@@ -1,75 +1,40 @@
 # legolas-vim
 个人vim配置。参考帖子：[vim与Python真乃天作之合](http://codingpy.com/article/vim-and-python-match-in-heaven/)
 
-# IDE环境配置
-
 支持Python自动补全的最好插件是YouCompleteMe。而YouCompleteMe需要比较高版本的vim(>=7.4.143)，所以，需要编译安装vim，参见相关文档[1]。另外还需要一些C库，参见相关文档[2]。
 
 vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
-以上部分使用各平台脚本可自动安装。
-
 由于是为python开发打造。默认安装了pip等py开发必需品。公用开发工具默认安装（brew、zsh等）。
 
 
-## Ubuntu
+# 自己的Vim-IDE 
 
-在ubuntu系统上，运行以下命令即可：
+**支持Ubuntu（自动编译最新版vim）、centos（默认使用系统自带vim，用户可能需要自行升级，可参考ubuntu脚本）、Mac OSX（默认基于brew安装新版vim）**，一键安装：
 
-    sudo bash init-vim-ubuntu.sh  # 自动编译vim
+    cd ~ && rm -rf legolas-vim && git clone https://github.com/TTWShell/legolas-vim.git && cd legolas-vim $$ bash install.sh
 
-自动安装插件并编译ycm依赖：
-
-    sudo bash install-plugins.sh init  # init 是用于初始化的
-
-**注意**：
-
-安装过程中打开vim会提示找不到syntax.vim或者配色。
-syntax做一下ln s 操作即可。配色安装完毕会自动解决。
-
-后续更新插件则只需要（自动清理不使用的插件）：
+如果用户修改了vimrc配置文件，运行以下命令更新即可：
 
     sudo bash install-plugins.sh
 
-## Mac osx
 
-mac上有好用的brew。可以直接安装8.0以上版本的vim。
+# 问题集锦
 
-前提配置（需要安装了brew，可参考[Mac环境配置及python包安装的那些坑](http://www.ttwshell.com/article/mac-env-and-python-package-install-errors.html)）：
+1. 安装过程中打开vim可能会提示找不到syntax.vim或者配色。syntax做一下ln s 操作即可。配色安装完毕会自动解决。
 
-    brew update
-    export PATH=/usr/local/bin:$PATH  # 在／etc/profile 添加一下语句（使用zsh的在~/.zshrc添加即可）
+2. mac上有好用的brew。可以直接安装8.0以上版本的vim。可参考[Mac环境配置及python包安装的那些坑](http://www.ttwshell.com/article/mac-env-and-python-package-install-errors.html)：
 
-直接运行命令初始化vim环境：
+        brew update
+        export "PATH=/usr/local/bin:$PATH"  # 在／etc/profile 添加一下语句（使用zsh的在~/.zshrc添加即可）
 
-    bash init-vim-osx.sh
+3. mac由于并没有直接替换系统自带的vim。所以其他需要vim支持的工具需要修改配置。例如git：
 
-后续安装同ubuntu环境:
+        git config --global core.editor "/usr/local/bin/vim"
 
-    sudo bash install-plugins.sh init  # init 是用于初始化的，非初次安装去掉init命令
+4. 关于字体
 
-OSX 特别注意：
-
-1. 由于并没有直接替换系统自带的vim。所以其他需要vim支持的工具需要修改配置。例如git：
-
-    git config --global core.editor "/usr/local/bin/vim"
-
-## Centos
-
-本人使用的是cento7.2。vim版本已经能满足需求了。不需要单独升级，只需要安装依赖即可。vim的编译安装请参考官方文档。
-
-    sudo bash init-vim-centos.sh
-
-后续安装同ubuntu、osx：
-
-    sudo bash install-plugins.sh init  # init 是用于初始化的，非初次安装去掉init命令
-
-
-# 关于字体
-
-[powerline-fonts](https://github.com/powerline/fonts)已经去掉了monaco_for_powerline。但是iterm2默认字体monaco非常好看，为了使用monaco并解决特殊符号乱码问题，所以Backup了一份。执行以下命令即可：
-
-    cd fonts && bash install-fonts.sh
+    [powerline-fonts](https://github.com/powerline/fonts)已经去掉了monaco_for_powerline。但是iterm2默认字体monaco非常好看，为了使用monaco并解决特殊符号乱码问题，所以Backup了一份。会自动安装。
 
 
 # 快捷键说明
