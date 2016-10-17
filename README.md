@@ -1,5 +1,7 @@
 # legolas-vim
-个人vim配置。参考帖子：[vim与Python真乃天作之合](http://codingpy.com/article/vim-and-python-match-in-heaven/)
+个人vim配置。参考帖子：[vim与Python真乃天作之合](http://codingpy.com/article/vim-and-python-match-in-heaven/)。最终效果图：
+
+![qq20161017-0](https://cloud.githubusercontent.com/assets/8017604/19426340/4def15cc-946e-11e6-891b-924f52486144.png)
 
 支持Python自动补全的最好插件是YouCompleteMe。而YouCompleteMe需要比较高版本的vim(>=7.4.143)，所以，需要编译安装vim，参见相关文档[1]。另外还需要一些C库，参见相关文档[2]。
 
