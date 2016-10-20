@@ -58,6 +58,8 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'unblevable/quick-scope'
 Plugin 'elzr/vim-json'
 Plugin 'dyng/ctrlsf.vim'
+Plugin 'kylef/apiblueprint.vim'
+
 
 " Plugin 'majutsushi/tagbar'
 " Plugin 'xolox/vim-misc'
