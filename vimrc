@@ -50,13 +50,7 @@ Plugin 'kien/ctrlp.vim'
 
 " Syntaxes
 Plugin 'Glench/Vim-Jinja2-Syntax'
-Plugin 'cstrahan/vim-capnp'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'groenewege/vim-less'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'othree/html5.vim'
-Plugin 'saltstack/salt-vim'
-Plugin 'tshirtman/vim-cython'
 Plugin 'vim-scripts/nginx.vim'
 Plugin 'fatih/vim-go'
 Plugin 'othree/javascript-libraries-syntax.vim'
@@ -64,9 +58,11 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'unblevable/quick-scope'
 Plugin 'elzr/vim-json'
 Plugin 'dyng/ctrlsf.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
+
+" Plugin 'majutsushi/tagbar'
+" Plugin 'xolox/vim-misc'
+" Plugin 'xolox/vim-easytags'
+" Plugin 'jstemmer/gotags'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -101,6 +97,14 @@ set pastetoggle=<F3>
 " For when you forget to sudo.. Really Write the file.
 cmap w!! w !sudo tee % >/dev/null
 
+" auto clear whitespace
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+    endfun
+autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " syntastic
     " check when open file
@@ -165,6 +169,7 @@ set wildignore=*.o,*~,*.pyc
 
 " 目录树快捷键
 map <C-t> :NERDTreeToggle<CR>
+map <F5> :NERDTreeToggle<CR>
 " NERDTree settings
 " 是否显示隐藏文件
 let NERDTreeShowHidden=0

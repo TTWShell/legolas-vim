@@ -17,7 +17,7 @@ function init {
 
     sudo mkdir -p ~/.vim/colors && sudo cp ~/.vim/bundle/vim-colorschemes/colors/* ~/.vim/colors
 
-    cd ~/.vim/bundle/YouCompleteMe && sudo ./install.py --clang-completer
+    cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive && sudo ./install.py --clang-completer --gocode-completer
 }
 
 
