@@ -60,7 +60,6 @@ Plugin 'elzr/vim-json'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'kylef/apiblueprint.vim'
 
-
 " Plugin 'majutsushi/tagbar'
 " Plugin 'xolox/vim-misc'
 " Plugin 'xolox/vim-easytags'
