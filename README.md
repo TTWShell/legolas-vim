@@ -56,10 +56,11 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
     F2  # 打开or关闭行号
     F3  # 打开or关闭复制支持
     F4  # 折叠or展开代码
+    F5  # 打开or关闭目录树
     F7  # flake8 check
     F8  # 打开or关闭函数列表
 
-    Ctrl-t  # 打开or关闭目录树
+    Ctrl-t  # 打开or关闭目录树（golang会有冲突，换用F5）
 
     space  # 折叠/展开代码
 
