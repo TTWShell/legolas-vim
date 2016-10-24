@@ -1,5 +1,5 @@
 # legolas-vim
-个人vim配置。参考帖子：[vim与Python真乃天作之合](http://codingpy.com/article/vim-and-python-match-in-heaven/)。最终效果图：
+个人vim配置。最终效果图（由于性能问题，去掉了ctags，因为ycm是支持依赖库跳转的）：
 
 ![qq20161017-0](https://cloud.githubusercontent.com/assets/8017604/19426340/4def15cc-946e-11e6-891b-924f52486144.png)
 
@@ -28,7 +28,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 2. mac上有好用的brew。可以直接安装8.0以上版本的vim。可参考[Mac环境配置及python包安装的那些坑](http://www.ttwshell.com/article/mac-env-and-python-package-install-errors.html)：
 
         brew update
-        export "PATH=/usr/local/bin:$PATH"  # 在／etc/profile 添加一下语句（使用zsh的在~/.zshrc添加即可）
+        export PATH=/usr/local/bin:$PATH  # 在／etc/profile 添加一下语句（使用zsh的在~/.zshrc添加即可）
 
 3. mac由于并没有直接替换系统自带的vim。所以其他需要vim支持的工具需要修改配置。例如git：
 
@@ -36,7 +36,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
 4. 关于字体
 
-    [powerline-fonts](https://github.com/powerline/fonts)已经去掉了monaco_for_powerline。但是iterm2默认字体monaco非常好看，为了使用monaco并解决特殊符号乱码问题，所以Backup了一份。会自动安装。
+    [powerline-fonts](https://github.com/powerline/fonts)已经去掉了monaco_for_powerline。但是iterm2默认字体monaco非常好看，为了使用monaco并解决特殊符号乱码问题，所以Backup了一份。会自动安装。用户手动设置下iterm2字体配置即可（可搜索）。
 
 
 # 快捷键说明
@@ -50,15 +50,18 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
     Ctrl-l  # 切换到右侧的分割窗口
     Ctrl-k  # 切换到上方的分割窗口
     Ctrl-g  # 跳转到函数定义或者声明
+    Ctrl-o  # jump back to where you where before invoking the command 和 Ctrl-g、ctrl-i 配合使用
+    ctrl-i  # jump forward
+    ctrl-Shift-^  ＃ 跳转到上一个编辑的文件
 
-    tab 切换使用ngt即可。例如切换到第二个tab页，输入2gt。
+    tab切换使用ngt即可。例如切换到第二个tab页，输入2gt。
 
     F2  # 打开or关闭行号
     F3  # 打开or关闭复制支持
     F4  # 折叠or展开代码
     F5  # 打开or关闭目录树
     F7  # flake8 check
-    F8  # 打开or关闭函数列表
+    F8  # 打开or关闭函数列表（弃用、由于大项目性能问题以及函数跳转使用ycm更佳，去掉ctags支持）
 
     Ctrl-t  # 打开or关闭目录树（golang会有冲突，换用F5）
 
@@ -72,3 +75,5 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 1. [Building-Vim-from-source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
 2. [https://github.com/Valloric/YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 3. [https://github.com/VundleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim)
+4. [vim与Python真乃天作之合](http://codingpy.com/article/vim-and-python-match-in-heaven/)
+5. [https://valloric.github.io/YouCompleteMe/](https://valloric.github.io/YouCompleteMe/)
