@@ -56,6 +56,10 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
     tab切换使用ngt即可。例如切换到第二个tab页，输入2gt。
 
+    zz - move current line to the middle of the screen
+    zt - move current line to the top of the screen
+    zb - move current line to the bottom of the screen
+
     F2  # 打开or关闭行号
     F3  # 打开or关闭复制支持
     F4  # 折叠or展开代码

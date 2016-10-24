@@ -226,3 +226,5 @@ function! ToggleFold()
       let g:myVarFolded = 0
   endif
 endfunction
+
+set cursorline
