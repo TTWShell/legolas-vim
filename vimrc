@@ -60,11 +60,6 @@ Plugin 'elzr/vim-json'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'kylef/apiblueprint.vim'
 
-" Plugin 'majutsushi/tagbar'
-" Plugin 'xolox/vim-misc'
-" Plugin 'xolox/vim-easytags'
-" Plugin 'jstemmer/gotags'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -138,13 +133,7 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_filetype_whitelist = { 'python': 1 }
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
-" ctag and tagbar settings
-" toggle tagbar
-nnoremap <F8> :UpdateTags<CR>:TagbarToggle<CR>
-" open tagbar and jump to corresponding tag
-nnoremap <C-G> :TagbarOpen fj<CR>
+map <C-G>  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " auto update tagfile when save
 au BufWritePost *.py silent! :UpdateTags
