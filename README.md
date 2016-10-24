@@ -49,7 +49,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
     Ctrl-j  # 切换到下方的分割窗口
     Ctrl-l  # 切换到右侧的分割窗口
     Ctrl-k  # 切换到上方的分割窗口
-    Ctrl-g  # 打开tagbar并且光标定位到相应的tag
+    Ctrl-g  # 跳转到函数定义或者声明
 
     tab 切换使用ngt即可。例如切换到第二个tab页，输入2gt。
 
