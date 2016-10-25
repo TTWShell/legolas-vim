@@ -41,37 +41,45 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
 # 快捷键说明
 
-    # NERDTree 有按横向纵向布局模式打开文件的快捷，直接看help信息即可
-    sv <filename>  # 打开一个文件，纵向分割布局（新文件会在当前文件下方界面打开）
-    vs <filename>  # 横向分割布局（新文件会在当前文件右侧界面打开）
+1. NERDTree有按横向纵向布局模式打开文件的快捷，直接看help信息即可。
+2. tab切换使用ngt即可。例如切换到第二个tab页，输入2gt。
 
-    Ctrl-h  # 切换到左侧的分割窗口
-    Ctrl-j  # 切换到下方的分割窗口
-    Ctrl-l  # 切换到右侧的分割窗口
-    Ctrl-k  # 切换到上方的分割窗口
-    Ctrl-g  # 跳转到函数定义或者声明
-    Ctrl-o  # jump back to where you where before invoking the command 和 Ctrl-g、ctrl-i 配合使用
-    ctrl-i  # jump forward
-    ctrl-Shift-^  ＃ 跳转到上一个编辑的文件
+## 自定义快捷键
 
-    tab切换使用ngt即可。例如切换到第二个tab页，输入2gt。
+| 命令 | 说明 |
+| :--: | :--: |
+| sv \<filename\> | 打开一个文件，纵向分割布局（新文件会在当前文件下方界面打开）|
+| vs \<filename\> | 横向分割布局（新文件会在当前文件右侧界面打开）|
+| Ctrl-h | 切换到左侧的分割窗口 |
+| Ctrl-j | 切换到下方的分割窗口 |
+| Ctrl-l | 切换到右侧的分割窗口 |
+| Ctrl-k | 切换到上方的分割窗口 |
+| Ctrl-g | 跳转到函数定义或者声明 |
+| -- | -- |
+| F2 | 打开or关闭行号 |
+| F3 | 打开or关闭复制支持 |
+| F4 | 折叠or展开代码 |
+| F5 | 打开or关闭目录树 |
+| F7 | flake8 check |
+| F8 | 打开or关闭函数列表（弃用、由于大项目性能问题以及函数跳转使用ycm更佳，去掉ctags支持） |
+| -- | -- |
+| Ctrl-t | 打开or关闭目录树（golang会有冲突，换用F5） |
+| -- | -- |
+| space | 折叠/展开代码 |
+| -- | -- |
+| Shift-i | 目录是否显示隐藏文件（NERDTree）。便于git开发，默认永远不显示.git。 |
 
-    zz - move current line to the middle of the screen
-    zt - move current line to the top of the screen
-    zb - move current line to the bottom of the screen
+## 跳转
 
-    F2  # 打开or关闭行号
-    F3  # 打开or关闭复制支持
-    F4  # 折叠or展开代码
-    F5  # 打开or关闭目录树
-    F7  # flake8 check
-    F8  # 打开or关闭函数列表（弃用、由于大项目性能问题以及函数跳转使用ycm更佳，去掉ctags支持）
-
-    Ctrl-t  # 打开or关闭目录树（golang会有冲突，换用F5）
-
-    space  # 折叠/展开代码
-
-    Shift-i  # 目录是否显示隐藏文件（NERDTree）。便于git开发，默认永远不显示.git。
+| 命令 | 说明 |
+| :--: | :--: |
+| Ctrl-o | jump back to where you where before invoking the command 和 Ctrl-g、ctrl-i 配合使用 |
+| ctrl-i | jump forward |
+| ctrl-^ | 跳转到上一个编辑的文件 |
+| -- | -- |
+| zz | move current line to the middle of the screen |
+| zt | move current line to the top of the screen |
+| zb | move current line to the bottom of the screen |
 
 ## 删除
 
@@ -83,8 +91,8 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 | J | 删除两行之间的换行符 (亦可用于合并两行）|
 | dmove | 删除从当前光标到move所给位置的字符 |
 | dd | 删除当前行 |
-| :lined | 删除指定行 |
-| :line,lined | 删除指定范围内的行 |
+| :line**d** | 删除指定行 |
+| :line,line**d** | 删除指定范围内的行 |
 
 
 # 相关文档
