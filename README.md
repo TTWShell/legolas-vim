@@ -81,6 +81,19 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 | zt | move current line to the top of the screen |
 | zb | move current line to the bottom of the screen |
 
+## 搜索
+
+| 命令 | 说明 |
+| :--: | :--: |
+| :/pattern\<CR\> | 搜索所有包含pattern的单词（向上搜索） |
+| :?pattern\<CR\> | 搜索所有包含pattern的单词（向下搜索） |
+| n | 朝同一方向搜索 |
+| N | 反方向搜索 |
+| :/ pattern\<CR\> | 单词前加空格，精确匹配 |
+| :/^pattern\<CR\> | 搜索仅在行首出现 |
+| :/pattern$\<CR\> | 搜索仅在行末出现 |
+| \\^ \\$ | 特殊字符的搜索加反斜杠 |
+
 ## 删除
 
 | 命令 | 说明 |
