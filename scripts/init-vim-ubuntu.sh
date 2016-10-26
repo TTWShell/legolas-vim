@@ -14,6 +14,8 @@ sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
     libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
     python3-dev build-essential cmake git
 
+sudo apt-get install golang
+
 echoo ">>> Remove vim if you have it already ..."
 sudo apt-get remove vim vim-runtime gvim
 
