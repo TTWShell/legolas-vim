@@ -7,6 +7,9 @@ function echoo {
 echoo ">>> Install cmake using brew ..."
 brew install cmake
 
+echoo ">>> Install golang using brew ..."
+brew install golang
+
 echoo ">>> Install vim using brew ..."
 brew install vim
 

@@ -2,7 +2,7 @@
 
 
 # for ycm
-yum install gcc gcc-c++ kernel-devel cmake
+yum install gcc gcc-c++ kernel-devel cmake golang
 
 
 # for tarlist
