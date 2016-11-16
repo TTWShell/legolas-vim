@@ -113,9 +113,10 @@ autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,pe
     " let g:syntastic_auto_jump=1
     let g:syntastic_mode_map = {
                 \ "mode": "passive",
-                \ "active_filetypes": ["python"],
+                \ "active_filetypes": [],
                 \ "passive_filetypes": []}
 
+    map <F6> :SyntasticToggleMode<CR>
 
 " YouCompleteMe settings
 " youcompleteme
