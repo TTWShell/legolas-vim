@@ -1,5 +1,5 @@
 # legolas-vim
-个人vim配置。最终效果图（由于性能问题，去掉了ctags，因为ycm是支持依赖库跳转的）：
+个人vim配置。**支持python、go等自动提示，支持python的函数跳转（支持虚拟环境）。**最终效果图（由于性能问题，去掉了ctags，因为ycm是支持依赖库跳转的）：
 
 ![qq20161017-0](https://cloud.githubusercontent.com/assets/8017604/19426340/4def15cc-946e-11e6-891b-924f52486144.png)
 
@@ -10,7 +10,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 由于是为python开发打造。默认安装了pip等py开发必需品。公用开发工具默认安装（brew、zsh等）。
 
 
-# 自己的Vim-IDE 
+# 自己的Vim-IDE
 
 **支持Ubuntu（自动编译最新版vim）、centos（默认使用系统自带vim，用户可能需要自行升级，可参考ubuntu脚本）、Mac OSX（默认基于brew安装新版vim）**，一键安装：
 
