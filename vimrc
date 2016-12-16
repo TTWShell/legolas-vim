@@ -133,7 +133,8 @@ let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_filetype_whitelist = { 'python': 1 }
+" let g:ycm_filetype_whitelist = { 'python': 1 }
+let g:ycm_python_binary_path = 'python'
 map <C-G>  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " Vim's autocomplete is excruciatingly slow
 " http://stackoverflow.com/questions/2169645/vims-autocomplete-is-excruciatingly-slow
@@ -148,7 +149,7 @@ au BufWritePost *.py silent! :UpdateTags
 syntax on
 let &colorcolumn=80
 
-au BufNewFile,BufRead *.py
+au BufNewFile,BufRead *.*
 \ set tabstop=4 |
 \ set softtabstop=4 |
 \ set shiftwidth=4 |
