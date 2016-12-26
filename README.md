@@ -9,7 +9,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
 由于是为python开发打造。默认安装了pip等py开发必需品。公用开发工具默认安装（brew、zsh等）。
 
-
+**[使用privoxy和shadowsocks搭建局域网http代理](https://github.com/TTWShell/legolas-vim/wiki/使用privoxy和shadowsocks搭建局域网http代理)——局域网开发机安装legolas-vim解决方案！**
 # 自己的Vim-IDE
 
 **支持Ubuntu（自动编译最新版vim）、centos（默认使用系统自带vim，用户可能需要自行升级，可参考ubuntu脚本）、Mac OSX（默认基于brew安装新版vim）**，一键安装：
