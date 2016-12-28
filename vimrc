@@ -100,7 +100,7 @@ fun! <SID>StripTrailingWhitespaces()
     %s/\s\+$//e
     call cursor(l, c)
     endfun
-autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType * autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " syntastic
     " check when open file
@@ -121,8 +121,8 @@ autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,pe
 " YouCompleteMe settings
 " youcompleteme
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
-" 输入第2个字符开始补全
-let g:ycm_min_num_of_chars_for_completion=2
+" 输入第0个字符开始补全
+let g:ycm_min_num_of_chars_for_completion=0
 " 禁止缓存匹配项,每次都重新生成匹配项
 let g:ycm_cache_omnifunc=0
 " 开启语义补全
@@ -141,7 +141,7 @@ map <C-G>  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 set complete-=i
 
 " auto update tagfile when save
-au BufWritePost *.py silent! :UpdateTags
+" au BufWritePost *.py silent! :UpdateTags
 
 """""""""""""""""""""""""""""""""""""""""""""
 "              Vim UI                       "
@@ -149,14 +149,15 @@ au BufWritePost *.py silent! :UpdateTags
 syntax on
 let &colorcolumn=80
 
-au BufNewFile,BufRead *.*
+au BufNewFile,BufRead *
 \ set tabstop=4 |
 \ set softtabstop=4 |
 \ set shiftwidth=4 |
-\ set textwidth=79 |
 \ set expandtab |
 \ set autoindent |
 \ set fileformat=unix
+au BufNewFile,BufRead *.py
+\ set textwidth=79
 
 "python with virtualenv support
 py << EOF
