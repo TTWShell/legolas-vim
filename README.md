@@ -96,6 +96,20 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 | :/pattern$\<CR\> | 搜索仅在行末出现 |
 | \\^ \\$ | 特殊字符的搜索加反斜杠 |
 
+## 搜索替换
+[http://vim.wikia.com/wiki/Search_and_replace][http://vim.wikia.com/wiki/Search_and_replace]
+| 命令 | 说明 |
+| :--: | :--: |
+| :s/foo/bar/g | Change each 'foo' to 'bar' in the current line. |
+| :%s/foo/bar/g | Change each 'foo' to 'bar' in all the lines. |
+| :5,12s/foo/bar/g | Change each 'foo' to 'bar' for all lines from line 5 to line 12 (inclusive). |
+| :'a,'bs/foo/bar/g | Change each 'foo' to 'bar' for all lines from mark a to mark b inclusive (see Note below). |
+| :'<,'>s/foo/bar/g | When compiled with +visual, change each 'foo' to 'bar' for all lines within a visual selection. Vim automatically appends the visual selection range ('<,'>) for any ex command when you select an area and enter :. Also, see Note below. |
+| :.,$s/foo/bar/g | Change each 'foo' to 'bar' for all lines from the current line (.) to the last line ($) inclusive. |
+| :.,+2s/foo/bar/g | Change each 'foo' to 'bar' for the current line (.) and the two next lines (+2). |
+| :g/^baz/s/foo/bar/g | Change each 'foo' to 'bar' in each line starting with 'baz'. |
+
+
 ## 删除
 
 | 命令 | 说明 |
