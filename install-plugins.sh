@@ -13,7 +13,7 @@ function init {
 
     pip install flake8  # for vim-flake8
 
-    update;
+    update
 
     sudo mkdir -p ~/.vim/colors && sudo cp ~/.vim/bundle/vim-colorschemes/colors/* ~/.vim/colors
 
@@ -22,8 +22,8 @@ function init {
 
 
 if [[ $1 = "init" ]]; then
-    init;
+    init
 else
-    update;
+    update
 fi
 
