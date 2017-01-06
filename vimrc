@@ -183,7 +183,6 @@ nnoremap <C-H> <C-W><C-H>
 set wildignore=*.o,*~,*.pyc
 
 " 目录树快捷键
-map <C-t> :NERDTreeToggle<CR>
 map <F5> :NERDTreeToggle<CR>
 " NERDTree settings
 " 是否显示隐藏文件
@@ -234,3 +233,13 @@ function! ToggleFold()
 endfunction
 
 set cursorline
+
+" Shifting blocks visually
+" http://vim.wikia.com/wiki/Shifting_blocks_visually
+" Following is a more elaborate set of mappings (mapping Shift-Tab will
+" probably only work on gvim)
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv

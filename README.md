@@ -1,5 +1,5 @@
 # legolas-vim
-个人vim配置。**支持python、go等自动提示，支持python的函数跳转（支持虚拟环境）。**最终效果图（由于性能问题，去掉了ctags，因为ycm是支持依赖库跳转的）：
+个人vim配置。**支持python、go等自动提示，支持python、go的函数跳转（python支持虚拟环境）。**最终效果图（由于性能问题，去掉了ctags，因为ycm是支持依赖库跳转的）：
 
 ![qq20161017-0](https://cloud.githubusercontent.com/assets/8017604/19426340/4def15cc-946e-11e6-891b-924f52486144.png)
 
@@ -45,6 +45,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
 1. NERDTree有按横向纵向布局模式打开文件的快捷，直接看help信息即可。
 2. tab切换使用ngt即可。例如切换到第二个tab页，输入2gt。
+3. 支持pycharm中的代码块缩进操作（使用tab、s-Tab）。
 
 ## 自定义快捷键
 
@@ -65,8 +66,6 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 | F6 | 打开or关闭语法检查（大文件时影响性能） |
 | F7 | flake8 check |
 | F8 | 打开or关闭函数列表（弃用、由于大项目性能问题以及函数跳转使用ycm更佳，去掉ctags支持） |
-| -- | -- |
-| Ctrl-t | 打开or关闭目录树（golang会有冲突，换用F5） |
 | -- | -- |
 | space | 折叠/展开代码 |
 | -- | -- |
