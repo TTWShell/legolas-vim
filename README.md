@@ -46,6 +46,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 1. NERDTree有按横向纵向布局模式打开文件的快捷，直接看help信息即可。
 2. tab切换使用ngt即可。例如切换到第二个tab页，输入2gt。
 3. 支持pycharm中的代码块缩进操作（使用tab、s-Tab）。
+4. 支持全局搜索替换（多个文件搜索替换）。
 
 ## 自定义快捷键
 
@@ -99,6 +100,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 ## 搜索替换
 
 [http://vim.wikia.com/wiki/Search_and_replace](http://vim.wikia.com/wiki/Search_and_replace)
+[http://vim.wikia.com/wiki/Search_and_replace_in_multiple_buffers](http://vim.wikia.com/wiki/Search_and_replace_in_multiple_buffers)
 
 | 命令 | 说明 |
 | :-- | :--: |
@@ -110,6 +112,11 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 | :.,$s/foo/bar/g | Change each 'foo' to 'bar' for all lines from the current line (.) to the last line ($) inclusive. |
 | :.,+2s/foo/bar/g | Change each 'foo' to 'bar' for the current line (.) and the two next lines (+2). |
 | :g/^baz/s/foo/bar/g | Change each 'foo' to 'bar' in each line starting with 'baz'. |
+| -- | -- |
+| :arg \*.py | All \*.py files in current directory. |
+| :argadd \*.md | And all  \*.md files. |
+| :arg | Optional: Display the current arglist. |
+| :argdo %s/pattern/replace/ge \| update | Search and replace in all files in arglist. |
 
 
 ## 删除
@@ -133,3 +140,5 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 3. [https://github.com/VundleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim)
 4. [vim与Python真乃天作之合](http://codingpy.com/article/vim-and-python-match-in-heaven/)
 5. [https://valloric.github.io/YouCompleteMe/](https://valloric.github.io/YouCompleteMe/)
+6. [http://vim.wikia.com/wiki/Search_and_replace](http://vim.wikia.com/wiki/Search_and_replace)
+7. [http://vim.wikia.com/wiki/Search_and_replace_in_multiple_buffers](http://vim.wikia.com/wiki/Search_and_replace_in_multiple_buffers)
