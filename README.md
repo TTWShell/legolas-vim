@@ -97,9 +97,11 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 | \\^ \\$ | 特殊字符的搜索加反斜杠 |
 
 ## 搜索替换
-[http://vim.wikia.com/wiki/Search_and_replace][http://vim.wikia.com/wiki/Search_and_replace]
+
+[http://vim.wikia.com/wiki/Search_and_replace](http://vim.wikia.com/wiki/Search_and_replace)
+
 | 命令 | 说明 |
-| :--: | :--: |
+| :-- | :--: |
 | :s/foo/bar/g | Change each 'foo' to 'bar' in the current line. |
 | :%s/foo/bar/g | Change each 'foo' to 'bar' in all the lines. |
 | :5,12s/foo/bar/g | Change each 'foo' to 'bar' for all lines from line 5 to line 12 (inclusive). |
