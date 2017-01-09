@@ -232,7 +232,8 @@ function! ToggleFold()
   endif
 endfunction
 
-set cursorline
+set cursorline  " 光标横线
+set cursorcolumn  " 光标竖线
 
 " Shifting blocks visually
 " http://vim.wikia.com/wiki/Shifting_blocks_visually
