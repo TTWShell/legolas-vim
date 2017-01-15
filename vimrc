@@ -219,6 +219,7 @@ else
 endif
 
 " 自定义代码折叠，折叠（和取消折叠）
+set foldmethod=syntax
 nnoremap <space> za
 map <F4> :call ToggleFold()<CR>
 let myVarFolded = 1
