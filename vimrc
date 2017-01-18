@@ -62,6 +62,8 @@ Plugin 'kylef/apiblueprint.vim'
 
 " a Git wrapper so awesome
 Plugin 'tpope/vim-fugitive'
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -87,8 +89,10 @@ set encoding=utf-8
 set fencs=utf-8,gb2312,gbk     " Sets the default encoding
 filetype plugin indent on      " Automatically detect file types.
 set nu
-" toggle line number
-map <F2> :set number!<cR>
+" toggle line number and vim-gitgutter
+map <F2> :set number! \| GitGutterToggle<cR>
+"
+let g:gitgutter_max_signs = 500  " default value
 
 " toggle paste
 set pastetoggle=<F3>
