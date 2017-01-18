@@ -7,9 +7,10 @@ function echoo {
 function backup {
     echoo ">>> Backing up old vim configs"
 
-    today=`date +%Y%m%d`
+    now=`date +%Y%m%dT%H-%M-%S`
     for i in $HOME/.vim $HOME/.vimrc; do
-        [ -e $i ] && sudo mv $i $i.$today;
+        echo $i'-->'$i.$now
+        [ -e $i ] && sudo mv $i $i.$now;
     done
 }
 
