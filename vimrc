@@ -60,6 +60,11 @@ Plugin 'elzr/vim-json'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'kylef/apiblueprint.vim'
 
+" a Git wrapper so awesome
+Plugin 'tpope/vim-fugitive'
+" A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
+Plugin 'airblade/vim-gitgutter'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -84,8 +89,12 @@ set encoding=utf-8
 set fencs=utf-8,gb2312,gbk     " Sets the default encoding
 filetype plugin indent on      " Automatically detect file types.
 set nu
-" toggle line number
-map <F2> :set number!<cR>
+" toggle line number and vim-gitgutter
+map <F2> :set number! \| GitGutterToggle<cR>
+let g:gitgutter_max_signs = 500  " default value
+map <F8> :Glog<cR>
+map <F9> :cprev<cR>
+map <F10> :cnext<cR>
 
 " toggle paste
 set pastetoggle=<F3>
@@ -220,6 +229,7 @@ endif
 
 " 自定义代码折叠，折叠（和取消折叠）
 set foldmethod=syntax
+set nofoldenable " default unfolded when open file
 nnoremap <space> za
 map <F4> :call ToggleFold()<CR>
 let myVarFolded = 1
