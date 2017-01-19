@@ -121,9 +121,9 @@ autocmd FileType * autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespa
     " jump the cursor to the first detected issue
     " let g:syntastic_auto_jump=1
     let g:syntastic_mode_map = {
-                \ "mode": "passive",
-                \ "active_filetypes": [],
-                \ "passive_filetypes": []}
+        \ "mode": "active",
+        \ "active_filetypes": [],
+        \ "passive_filetypes": []}
 
     map <F6> :SyntasticToggleMode<CR>
 
