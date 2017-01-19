@@ -91,8 +91,10 @@ filetype plugin indent on      " Automatically detect file types.
 set nu
 " toggle line number and vim-gitgutter
 map <F2> :set number! \| GitGutterToggle<cR>
-"
 let g:gitgutter_max_signs = 500  " default value
+map <F8> :Glog<cR>
+map <F9> :cprev<cR>
+map <F10> :cnext<cR>
 
 " toggle paste
 set pastetoggle=<F3>
