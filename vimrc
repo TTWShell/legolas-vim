@@ -15,8 +15,8 @@ Plugin 'VundleVim/Vundle.vim'
 """""""""""""""""""""""""""""""""""""""""""""
 "           personal plugin start           "
 """""""""""""""""""""""""""""""""""""""""""""
-" Syntastic is a syntax checking plugin for Vim
-Plugin 'scrooloose/syntastic'
+" async syntax checking plugin for Vim
+Plugin 'w0rp/ale'
 
 " auto check python use pep8
 Plugin 'nvie/vim-flake8'
@@ -92,6 +92,7 @@ set encoding=utf-8
 set fencs=utf-8,gb2312,gbk     " Sets the default encoding
 filetype plugin indent on      " Automatically detect file types.
 set nu
+
 " toggle line number and vim-gitgutter
 map <F2> :set number! \| GitGutterToggle<cR>
 let g:gitgutter_max_signs = 500  " default value
@@ -118,23 +119,13 @@ autocmd FileType * autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespa
 au BufNewFile,BufRead *.tpl set ft=html
 
 " syntastic
-    " check when open file
-    let g:syntastic_check_on_open = 1
-    " let g:syntastic_python_checkers = ['pylint']
-    let g:syntastic_python_checkers = ['flake8']
-    " ignore pep8 character lenght limit
-    let g:syntastic_python_flake8_args = '--ignore=E402'
-    " jump the cursor to the first detected issue
-    " let g:syntastic_auto_jump=1
-    let g:syntastic_mode_map = {
-        \ "mode": "active",
-        \ "active_filetypes": [],
-        \ "passive_filetypes": []}
-
-    map <F6> :SyntasticToggleMode<CR>
+set nocompatible
+filetype off
+let &runtimepath.=',~/.vim/bundle/ale'
+filetype plugin on
+let g:ale_sign_column_always = 1
 
 " YouCompleteMe settings
-" youcompleteme
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 " 输入第0个字符开始补全
 let g:ycm_min_num_of_chars_for_completion=0
