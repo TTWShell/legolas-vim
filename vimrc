@@ -90,7 +90,6 @@ autocmd! BufWritePost ~/.vimrc source ~/.vimrc
 
 set encoding=utf-8
 set fencs=utf-8,gb2312,gbk     " Sets the default encoding
-filetype plugin indent on      " Automatically detect file types.
 set nu
 
 " toggle line number and vim-gitgutter
@@ -123,7 +122,11 @@ set nocompatible
 filetype off
 let &runtimepath.=',~/.vim/bundle/ale'
 filetype plugin on
-let g:ale_sign_column_always = 1
+let g:ale_sign_column_always = 0 " 一般需要实时检查，默认关闭
+let g:ale_lint_on_save = 1 " save file auto check
+let g:ale_lint_on_text_changed = 0 " for ale_lint_on_save = 1
+let g:ale_lint_on_enter = 0 " for ale_lint_on_save = 1
+map <F6> :ALEToggle<CR>
 
 " YouCompleteMe settings
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
