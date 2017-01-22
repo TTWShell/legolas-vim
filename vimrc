@@ -48,6 +48,9 @@ Plugin 'tmhedberg/SimpylFold'
 " super search
 Plugin 'kien/ctrlp.vim'
 
+" a vim plug-in which provides support for expanding abbreviations similar to emmet.
+Plugin 'mattn/emmet-vim'
+
 " Syntaxes
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'othree/html5.vim'
@@ -110,6 +113,9 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
     endfun
 autocmd FileType * autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+" deal *.tpl
+au BufNewFile,BufRead *.tpl set ft=html
 
 " syntastic
     " check when open file
