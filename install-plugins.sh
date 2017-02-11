@@ -9,6 +9,7 @@ function install {
 function update {
     sudo vim +PluginUpdate +qall
 }
+
 function init {
     echo ">>> Set up Vundle ..."
     sudo rm -rf ~/.vim/bundle/Vundle.vim
@@ -22,7 +23,6 @@ function init {
 
     cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive && sudo ./install.py --clang-completer --gocode-completer
 }
-
 
 if [[ $1 = "init" ]]; then
     init
