@@ -1,4 +1,5 @@
 # legolas-vim
+
 个人vim配置。**支持python、go等自动提示，支持python、go的函数跳转（python支持虚拟环境）。**最终效果图（由于性能问题，去掉了ctags，因为ycm是支持依赖库跳转的）：
 
 ![qq20161017-0](https://cloud.githubusercontent.com/assets/8017604/19426340/4def15cc-946e-11e6-891b-924f52486144.png)
@@ -9,18 +10,20 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
 由于是为python开发打造。默认安装了pip等py开发必需品。公用开发工具默认安装（brew、zsh等）。
 
-**[使用privoxy和shadowsocks搭建局域网http代理](https://github.com/TTWShell/legolas-vim/wiki/使用privoxy和shadowsocks搭建局域网http代理)——局域网开发机安装legolas-vim解决方案！**
 
+# Install & Update
 
-# 自己的Vim-IDE
-
-**支持Ubuntu（自动编译最新版vim）、centos（默认使用系统自带vim，用户可能需要自行升级，可参考ubuntu脚本）、Mac OSX（默认基于brew安装新版vim）**，一键安装：
+**支持Ubuntu、Centos（需要先处理下问题5sudo vim的问题）、Mac OSX（默认基于brew安装新版vim）**，一键安装：
 
     cd ~ && rm -rf legolas-vim && git clone https://github.com/TTWShell/legolas-vim.git && cd legolas-vim && bash install.sh
 
 如果用户修改了vimrc配置文件，运行以下命令更新即可：
 
     sudo bash install-plugins.sh
+
+升级插件：
+
+    sudo bash install-plugins.sh update
 
 
 # 问题集锦
@@ -39,6 +42,14 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 4. 关于字体
 
     [powerline-fonts](https://github.com/powerline/fonts)已经去掉了monaco_for_powerline。但是iterm2默认字体monaco非常好看，为了使用monaco并解决特殊符号乱码问题，所以Backup了一份。会自动安装。用户手动设置下iterm2字体配置即可（可搜索）。
+
+5. 关于centos 使用sudo的问题（sudo: vim: command not found）
+
+    参考[http://superuser.com/questions/548508/why-cant-i-sudo-some-commands-e-g-vim](http://superuser.com/questions/548508/why-cant-i-sudo-some-commands-e-g-vim)
+    
+6. 局域网安装问题
+
+    **[使用privoxy和shadowsocks搭建局域网http代理](https://github.com/TTWShell/legolas-vim/wiki/使用privoxy和shadowsocks搭建局域网http代理)——局域网开发机安装legolas-vim解决方案！**
 
 
 # 快捷键说明
