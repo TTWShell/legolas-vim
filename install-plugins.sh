@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
-function update {
+function install {
     cp vimrc $HOME/.vimrc
     sudo vim +PluginClean +qall
     sudo vim +PluginInstall +qall
 }
 
+function update {
+    sudo vim +PluginUpdate +qall
+}
 function init {
     echo ">>> Set up Vundle ..."
     sudo rm -rf ~/.vim/bundle/Vundle.vim
@@ -23,7 +26,8 @@ function init {
 
 if [[ $1 = "init" ]]; then
     init
-else
+elif [[ $1 = "update" ]]; then
     update
+else
+    install
 fi
-
