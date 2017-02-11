@@ -9,15 +9,15 @@ function echoo {
 echoo ">>> Building Vim from source: https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source"
 
 echoo ">>> First, install all the prerequisite libraries, including Git ..."
-sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev \
+sudo apt-get install -y libncurses5-dev libgnome2-dev libgnomeui-dev \
     libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
     libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev \
     python3-dev build-essential cmake git
 
-sudo apt-get install golang
+sudo apt-get install -y golang
 
 echoo ">>> Remove vim if you have it already ..."
-sudo apt-get remove vim vim-runtime gvim
+sudo apt-get remove -y vim vim-runtime gvim
 
 echoo ">>> Install vim ..."
 cd ~ && rm -rf vim && git clone https://github.com/vim/vim.git && cd vim
@@ -31,6 +31,3 @@ cd ~ && rm -rf vim && git clone https://github.com/vim/vim.git && cd vim
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
 make VIMRUNTIMEDIR=/usr/local/share/vim/vim80
 sudo make install
-
-# for plugins tag-misc, easy-tag, tagbar
-sudo apt-get install exuberant-ctags

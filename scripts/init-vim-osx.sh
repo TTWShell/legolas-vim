@@ -12,6 +12,3 @@ brew install golang
 
 echoo ">>> Install vim using brew ..."
 brew install vim
-
-echoo ">>> Install ctags using brew ...(for tarlist)"
-brew install ctags
