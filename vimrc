@@ -156,18 +156,20 @@ set complete-=i
 "              Vim UI                       "
 """""""""""""""""""""""""""""""""""""""""""""
 syntax on
-let &colorcolumn=80
 
-set list listchars=tab:>-
 au BufNewFile,BufRead *
 \ set tabstop=4 |
 \ set softtabstop=4 |
 \ set shiftwidth=4 |
 \ set expandtab |
 \ set autoindent |
-\ set fileformat=unix
+\ set fileformat=unix |
+\ set list listchars=tab:>-
+
 au BufNewFile,BufRead *.py
+\ set colorcolumn=80 |
 \ set textwidth=79
+
 au BufNewFile,BufRead *.go
 \ set nolist
 
