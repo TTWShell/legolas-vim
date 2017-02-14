@@ -158,6 +158,7 @@ set complete-=i
 syntax on
 let &colorcolumn=80
 
+set list listchars=tab:>-
 au BufNewFile,BufRead *
 \ set tabstop=4 |
 \ set softtabstop=4 |
@@ -167,6 +168,8 @@ au BufNewFile,BufRead *
 \ set fileformat=unix
 au BufNewFile,BufRead *.py
 \ set textwidth=79
+au BufNewFile,BufRead *.go
+\ set nolist
 
 "python with virtualenv support
 py << EOF
