@@ -17,7 +17,7 @@ function init {
 
     pip install flake8  # for vim-flake8
 
-    update
+    install
 
     sudo mkdir -p ~/.vim/colors && sudo cp ~/.vim/bundle/vim-colorschemes/colors/* ~/.vim/colors
 
