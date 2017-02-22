@@ -27,6 +27,7 @@ function init {
 if [[ $1 = "init" ]]; then
     init
 elif [[ $1 = "update" ]]; then
+    install
     update
 else
     install

@@ -91,6 +91,7 @@ autocmd! BufWritePost ~/.vimrc source ~/.vimrc
 set encoding=utf-8
 set fencs=utf-8,gb2312,gbk     " Sets the default encoding
 set nu
+set hlsearch
 
 " toggle line number and vim-gitgutter
 map <F2> :set number! \| GitGutterToggle<cR>
