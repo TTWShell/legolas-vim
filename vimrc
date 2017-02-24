@@ -168,8 +168,7 @@ au BufNewFile,BufRead *
 \ set list listchars=tab:>-
 
 au BufNewFile,BufRead *.py
-\ set colorcolumn=80 |
-\ set textwidth=79
+\ set colorcolumn=80
 
 au BufNewFile,BufRead *.go
 \ set nolist
