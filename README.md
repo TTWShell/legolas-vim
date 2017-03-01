@@ -46,7 +46,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 5. 关于centos 使用sudo的问题（sudo: vim: command not found）
 
     参考[http://superuser.com/questions/548508/why-cant-i-sudo-some-commands-e-g-vim](http://superuser.com/questions/548508/why-cant-i-sudo-some-commands-e-g-vim)
-    
+
 6. 局域网安装问题
 
     **[使用privoxy和shadowsocks搭建局域网http代理](https://github.com/TTWShell/legolas-vim/wiki/使用privoxy和shadowsocks搭建局域网http代理)——局域网开发机安装legolas-vim解决方案！**
@@ -69,6 +69,10 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 | Ctrl-j | 切换到下方的分割窗口 |
 | Ctrl-l | 切换到右侧的分割窗口 |
 | Ctrl-k | 切换到上方的分割窗口 |
+| Alt-h | 减小当前窗口的宽度 |
+| Alt-j | 减小当前窗口的高度 |
+| Alt-l | 增加当前窗口的高度 |
+| Alt-k | 增加当前窗口的宽度 |
 | Ctrl-g | 跳转到函数定义或者声明 |
 | Ctrl-y, | emmet自动补全快捷 |
 | -- | -- |
