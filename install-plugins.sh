@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function install {
-    cp vimrc $HOME/.vimrc
+    sudo cp vimrc $HOME/.vimrc
     sudo vim +PluginClean +qall
     sudo vim +PluginInstall +qall
 }
