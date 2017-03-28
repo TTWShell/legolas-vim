@@ -41,7 +41,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
             bash fonts/install-fonts.sh
     esac
     sudo bash install-plugins.sh init
-    echoo "Install finished."
+    echoo "Install finished. If you need orther language support, please run: ./install-plugins.sh --help"
 else
     echoo "User cancels the operation."
 fi

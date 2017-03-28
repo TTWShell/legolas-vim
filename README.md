@@ -1,6 +1,6 @@
 # legolas-vim
 
-个人vim配置。**支持python、go等自动提示，支持python、go的函数跳转（python支持虚拟环境）。**最终效果图（由于性能问题，去掉了ctags，因为ycm是支持依赖库跳转的）：
+个人vim配置。**支持python、go等自动提示，支持python、go的函数跳转（python支持虚拟环境）。** 最终效果图（函数列表的feature已移除，因为大项目会导致性能问题）：
 
 ![qq20161017-0](https://cloud.githubusercontent.com/assets/8017604/19426340/4def15cc-946e-11e6-891b-924f52486144.png)
 
@@ -13,17 +13,21 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
 # Install & Update
 
-**支持Ubuntu、Centos（需要先处理下问题5sudo vim的问题）、Mac OSX（默认基于brew安装新版vim）**，一键安装：
+**支持Ubuntu、Centos（需要先处理下问题5 sudo vim的问题）、Mac OSX（默认基于brew安装新版vim）**，一键安装：
 
     cd ~ && rm -rf legolas-vim && git clone https://github.com/TTWShell/legolas-vim.git && cd legolas-vim && bash install.sh
 
 如果用户修改了vimrc配置文件，运行以下命令更新即可：
 
-    sudo bash install-plugins.sh
+    ./install-plugins.sh install
 
 升级插件：
 
-    sudo bash install-plugins.sh update
+    ./install-plugins.sh update
+
+重新build YCM（参数自定义）:
+
+    ./install-plugins.sh rebuild --clang-completer --gocode-completer
 
 
 # 问题集锦
