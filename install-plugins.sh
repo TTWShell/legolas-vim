@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 function install {
-    sudo cp vimrc $HOME/.vimrc
-    sudo vim +PluginClean +qall
-    sudo vim +PluginInstall +qall
+    cp vimrc $HOME/.vimrc
+    yes "\n" | sudo vim +PluginClean +qall
+    yes "\n" | sudo vim +PluginInstall +qall
 }
 
 function update {
-    sudo vim +PluginUpdate +qall
+    yes "\n" | sudo vim +PluginUpdate +qall
 }
 
 function init {
