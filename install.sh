@@ -16,32 +16,28 @@ function backup {
 
 platform=""
 for i in "Centos","Centos" "Ubuntu","Ubuntu" "Darwin","MacOSX"; do
-	key=${i%,*}; value=${i#*,};
-	if [ `python -mplatform | grep -ic  $key` == 1 ]; then
+    key=${i%,*}; value=${i#*,};
+    if [ `python -mplatform | grep -ic  $key` == 1 ]; then
        platform=$value
        echoo "You os is $platform."
     fi
 done
 
 
-read -p "Rebulid the vim and all plugins, Are you sure(Y/N)? " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    backup
-    case $platform in
-        Centos)
-            sudo bash scripts/init-vim-centos.sh
-            ;;
-        Ubuntu)
-            sudo bash scripts/init-vim-ubuntu.sh
-            ;;
-        MacOSX)
-            bash scripts/init-vim-osx.sh
-            echoo ">>> Install fonts for powerline ..."
-            bash fonts/install-fonts.sh
-    esac
-    sudo bash install-plugins.sh init
-    echoo "Install finished. If you need orther language support, please run: ./install-plugins.sh --help"
-else
-    echoo "User cancels the operation."
-fi
+backup
+case $platform in
+    Centos)
+        sudo bash scripts/init-vim-centos.sh
+        ;;
+    Ubuntu)
+        sudo bash scripts/init-vim-ubuntu.sh
+        ;;
+    MacOSX)
+        bash scripts/init-vim-osx.sh
+        echoo ">>> Install fonts for powerline ..."
+        bash fonts/install-fonts.sh
+esac
+
+sudo bash install-plugins.sh init
+
+echoo "Install finished. If you need orther language support, please run: ./install-plugins.sh --help"
