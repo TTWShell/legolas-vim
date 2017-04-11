@@ -55,6 +55,14 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
     **[使用privoxy和shadowsocks搭建局域网http代理](https://github.com/TTWShell/legolas-vim/wiki/使用privoxy和shadowsocks搭建局域网http代理)——局域网开发机安装legolas-vim解决方案！**
 
+7. [tab显示为箭头不方便复制的问题](https://github.com/TTWShell/legolas-vim/issues/70)
+
+    1. 箭头不是真的有箭头，只是把tab显示为箭头，为的是查错方便，这样一眼就能看到有tab，而不是等到执行程序时候发现报错;
+    2. 文件本身有tab、使用paste模式复制了代码、在paste模式使用整体缩进快捷键才会引入tab;
+    3. 把tab一键替换为4空格的方法:
+
+            :retab
+
 
 # 快捷键说明
 
