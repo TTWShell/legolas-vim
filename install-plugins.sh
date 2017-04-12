@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 function install {
-    sudo cp vimrc $HOME/.vimrc
-    sudo vim +PluginClean +qall
-    sudo vim +PluginInstall +qall
+    cp vimrc $HOME/.vimrc
+    yes "\n" | sudo vim +PluginClean +qall
+    yes "\n" | sudo vim +PluginInstall +qall
 }
 
 function update {
-    sudo vim +PluginUpdate +qall
+    yes "\n" | sudo vim +PluginUpdate +qall
 }
 
 function init {
@@ -25,6 +25,8 @@ function init {
 }
 
 function rebuild() {
+    set -e
+    set -o pipefail
     cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive && sudo ./install.py "$@"
 }
 
@@ -33,7 +35,7 @@ function usage {
     printf "    init\t初始化安装插件\n"
     printf "    install\t安装新增变更配置\n"
     printf "    update\t更新配置且更新所有插件。可能会导致ycm不能正常工作，此时需要执行 rebuild 命令\n"
-    printf "    rebuild\trebuild YouCompleteMe。可加YCM build的参数，例如：-clang-completer --gocode-completer\n"
+    printf "    rebuild\trebuild YouCompleteMe。可加YCM build的参数，例如：--clang-completer --gocode-completer\n"
 }
 
 
