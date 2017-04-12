@@ -24,5 +24,6 @@ compiler:
   - gcc
 
 script:
+  - cmake --version
   - ./install.sh
   - sudo vim +PluginClean +qall

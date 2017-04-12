@@ -25,6 +25,8 @@ function init {
 }
 
 function rebuild() {
+    set -e
+    set -o pipefail
     cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive && sudo ./install.py "$@"
 }
 
