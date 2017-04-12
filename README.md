@@ -1,5 +1,7 @@
 # legolas-vim
 
+[![Build Status](https://travis-ci.org/TTWShell/legolas-vim.svg?branch=master)](https://travis-ci.org/TTWShell/legolas-vim)
+
 个人vim配置。**支持python、go等自动提示，支持python、go的函数跳转（python支持虚拟环境）。** 最终效果图（函数列表的feature已移除，因为大项目会导致性能问题）：
 
 ![qq20161017-0](https://cloud.githubusercontent.com/assets/8017604/19426340/4def15cc-946e-11e6-891b-924f52486144.png)
