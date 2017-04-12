@@ -7,23 +7,18 @@ os:
   - osx
 
 before_install:
-  - sudo add-apt-repository --yes ppa:kalakris/cmake
-  - sudo apt-get update -qq
-  - sudo apt-get install cmake
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo add-apt-repository --yes ppa:kalakris/cmake && sudo add-apt-repository --yes ppa:ubuntu-toolchain-r/test; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo add-apt-repository --yes ppa:bcandrea/backports; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update -qq; fi
 
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - gcc-5
-      - g++-5
-      - clang
+install:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y cmake gcc-4.8 g++-4.8 clang golang; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CXX="g++-4.8" CC="gcc-4.8" GOROOT="/usr/lib/go" GOPATH=$HOME/gocode PATH=$PATH:$GOPATH/bin; fi
+
 
 compiler:
   - gcc
 
 script:
-  - cmake --version
   - ./install.sh
   - sudo vim +PluginClean +qall
