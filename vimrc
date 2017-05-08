@@ -245,15 +245,13 @@ set foldmethod=syntax
 set nofoldenable " default unfolded when open file
 nnoremap <space> za
 map <F4> :call ToggleFold()<CR>
-let myVarFolded = 1
 function! ToggleFold()
-  if(g:myVarFolded == 0)
-      exec "normal! zM"
-      let g:myVarFolded = 1
-  else
+  if(&foldlevel == '0')
       exec "normal! zR"
-      let g:myVarFolded = 0
+  else
+      exec "normal! zM"
   endif
+  echo "foldlevel:" &foldlevel
 endfunction
 
 set cursorline  " 光标横线
