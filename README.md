@@ -1,3 +1,9 @@
+     |                  |                   _)
+     |  _ \  _` |  _ \  |  _` |  __| \ \   / | __ `__ \
+     |  __/ (   | (   | | (   |\__ \  \ \ /  | |   |   |
+    _|\___|\__, |\___/ _|\__,_|____/   \_/  _|_|  _|  _|
+           |___/
+
 # legolas-vim
 
 [![Build Status](https://travis-ci.org/TTWShell/legolas-vim.svg?branch=master)](https://travis-ci.org/TTWShell/legolas-vim)
