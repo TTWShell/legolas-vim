@@ -3,8 +3,13 @@ set -e
 set -o pipefail
 
 function echoo {
-    echo -e "\n\033[32m $1 \033[0m"
+    echo -e "\033[32m $1 \033[0m"
 }
+
+if [[ $1 != "INIT" ]]; then
+    echoo "if need install or reinstall legolas-vim, please run: ./install.sh INIT"
+    exit 1
+fi
 
 function backup {
     echoo ">>> Backing up old vim configs"
