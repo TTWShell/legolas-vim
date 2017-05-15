@@ -20,5 +20,5 @@ compiler:
   - gcc
 
 script:
-  - ./install.sh
+  - ./install.sh INIT
   - sudo vim +PluginClean +qall
