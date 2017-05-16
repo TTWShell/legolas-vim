@@ -23,7 +23,7 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
 **支持Ubuntu、Centos（需要先处理下问题5 sudo vim的问题）、Mac OSX（默认基于brew安装新版vim）**，一键安装：
 
-    cd ~ && rm -rf legolas-vim && git clone https://github.com/TTWShell/legolas-vim.git && cd legolas-vim && bash install.sh
+    cd ~ && rm -rf legolas-vim && git clone https://github.com/TTWShell/legolas-vim.git && cd legolas-vim && bash install.sh INIT
 
 如果用户修改了vimrc配置文件，运行以下命令更新即可：
 
@@ -70,6 +70,8 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
     3. 把tab一键替换为4空格的方法:
 
             :retab
+
+8. :w 保存文件可能会慢的情况，F6关闭语法检查。
 
 
 # 快捷键说明
