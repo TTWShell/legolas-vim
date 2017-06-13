@@ -48,6 +48,10 @@ case $platform in
         echoo ">>> Install fonts for powerline ..."
         bash fonts/install-fonts.sh
         ;;
+    *)
+        echoo "暂不支持此系统，欲使用此配置，需要先解决依赖安装的问题，欢迎提pr。"
+        exit 1
+        ;;
 esac
 
 sudo bash install-plugins.sh init
