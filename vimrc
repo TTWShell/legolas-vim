@@ -18,16 +18,13 @@ Plugin 'VundleVim/Vundle.vim'
 " async syntax checking plugin for Vim
 Plugin 'w0rp/ale'
 
-" auto check python use pep8
-Plugin 'nvie/vim-flake8'
-
 " Highlights trailing whitespace in red and provides
 Plugin 'bronson/vim-trailing-whitespace'
 
 " multiple selections
 Plugin 'terryma/vim-multiple-cursors'
 
-"" Colorthemes
+" Colorthemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
 Plugin 'flazz/vim-colorschemes'
@@ -63,7 +60,7 @@ Plugin 'elzr/vim-json'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'kylef/apiblueprint.vim'
 
-" a Git wrapper so awesome
+" A Git wrapper so awesome
 Plugin 'tpope/vim-fugitive'
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
 Plugin 'airblade/vim-gitgutter'
@@ -128,7 +125,7 @@ let g:ale_sign_column_always = 0 " 一般需要实时检查，默认关闭
 let g:ale_lint_on_save = 1 " save file auto check
 let g:ale_lint_on_text_changed = 0 " for ale_lint_on_save = 1
 let g:ale_lint_on_enter = 0 " for ale_lint_on_save = 1
-map <F6> :ALEToggle<CR>
+map <F6> :ALEToggle \| echo 'g:ale_enabled =' g:ale_enabled<CR>
 
 " YouCompleteMe settings
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
@@ -188,7 +185,7 @@ EOF
 
 " Ctrl-j 切换到下方的分割窗口 - Ctrl-k 切换到上方的分割窗口 - Ctrl-l
 " 切换到右侧的分割窗口 - Ctrl-h 切换到左侧的分割窗口
-"split navigations
+" split navigations
 set splitbelow
 set splitright
 nnoremap <C-J> <C-W><C-J>
@@ -209,7 +206,7 @@ map <F5> :NERDTreeToggle<CR>
 " NERDTree settings
 " 是否显示隐藏文件
 let NERDTreeShowHidden=0
-" 忽略一下文件的显示
+" 忽略以下文件的显示
 let NERDTreeIgnore=['\.pyc','\~$','\.swp','__pycache__','\.git$','\.DS_Store']
 " NERDTree git 扩展
 let g:NERDTreeIndicatorMapCustom = {
