@@ -18,9 +18,6 @@ Plugin 'VundleVim/Vundle.vim'
 " async syntax checking plugin for Vim
 Plugin 'w0rp/ale'
 
-" auto check python use pep8
-Plugin 'nvie/vim-flake8'
-
 " Highlights trailing whitespace in red and provides
 Plugin 'bronson/vim-trailing-whitespace'
 
