@@ -167,7 +167,7 @@ au BufNewFile,BufRead *
 \ set fileformat=unix |
 \ set list listchars=tab:>-
 
-au BufNewFile,BufRead *.py
+au BufNewFile,BufRead *.c,*.py
 \ set colorcolumn=80
 
 au BufNewFile,BufRead *.go
