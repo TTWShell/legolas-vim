@@ -263,3 +263,7 @@ nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
+
+
+" override with your local vimrc
+so ~/.vimrc.local
