@@ -37,6 +37,8 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
     ./install-plugins.sh rebuild --clang-completer --gocode-completer
 
+安装完成后后，可以通过修改HOME目录下的.vimrc.local来覆盖默认的vimrc配置。
+
 
 # 问题集锦
 
