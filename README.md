@@ -10,7 +10,7 @@
 
 个人vim配置。**支持python、go等自动提示，支持python、go的函数跳转（python支持虚拟环境）。** 最终效果图（函数列表的feature已移除，因为大项目会导致性能问题）：
 
-![qq20161017-0](https://cloud.githubusercontent.com/assets/8017604/19426340/4def15cc-946e-11e6-891b-924f52486144.png)
+![wx20170920-101535](https://user-images.githubusercontent.com/8017604/30623828-ab21327e-9dec-11e7-89e7-09b2645a987c.png)
 
 支持Python自动补全的最好插件是YouCompleteMe。而YouCompleteMe需要比较高版本的vim(>=7.4.143)，所以，需要编译安装vim，参见相关文档[1]。另外还需要一些C库，参见相关文档[2]。
 

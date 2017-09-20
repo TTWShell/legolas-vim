@@ -37,7 +37,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " show venv、git branch、file
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " enhance za
 Plugin 'tmhedberg/SimpylFold'
@@ -222,12 +224,17 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 " for powerline
-set laststatus=2
-set term=xterm-256color
-set termencoding=utf-8
-set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
+" set laststatus=2
+" set term=xterm-256color
+" set termencoding=utf-8
+" set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
 " set guifont=Ubuntu\ Mono
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
+
+" for airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='dark_minimal'
 
 " color scheme
 set background=dark        " Assume a dark background
