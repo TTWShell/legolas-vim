@@ -1,91 +1,76 @@
-set nocompatible              " be iMproved, required
-set backspace=indent,eol,start
-filetype off                  " required
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" Make sure you use single quotes
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-
+" async syntax checking plugin for Vim
 """""""""""""""""""""""""""""""""""""""""""""
 "           personal plugin start           "
 """""""""""""""""""""""""""""""""""""""""""""
 " async syntax checking plugin for Vim
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 
 " Highlights trailing whitespace in red and provides
-Plugin 'bronson/vim-trailing-whitespace'
+Plug 'bronson/vim-trailing-whitespace'
 
 " multiple selections
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 
 " Colorthemes
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'jnurmine/Zenburn'
-Plugin 'flazz/vim-colorschemes'
+Plug 'altercation/vim-colors-solarized'
+Plug 'jnurmine/Zenburn'
+Plug 'flazz/vim-colorschemes'
 
 " best auto complete tool I have ever used(jedi, supertab...)
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 " tree explore plugin
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " show venv、git branch、file
 " Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " enhance za
-Plugin 'tmhedberg/SimpylFold'
+Plug 'tmhedberg/SimpylFold'
 
 " super search
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
 " a vim plug-in which provides support for expanding abbreviations similar to emmet.
-Plugin 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 
 " Syntaxes
-Plugin 'Glench/Vim-Jinja2-Syntax'
-Plugin 'othree/html5.vim'
-Plugin 'vim-scripts/nginx.vim'
-Plugin 'fatih/vim-go'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'elzr/vim-json'
-Plugin 'dyng/ctrlsf.vim'
-Plugin 'kylef/apiblueprint.vim'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'othree/html5.vim'
+Plug 'vim-scripts/nginx.vim'
+Plug 'fatih/vim-go'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'hynek/vim-python-pep8-indent'
+Plug 'elzr/vim-json'
+Plug 'dyng/ctrlsf.vim'
+Plug 'kylef/apiblueprint.vim'
 
 " A Git wrapper so awesome
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks.
-Plugin 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
+" Initialize plugin system
+call plug#end()
+filetype plugin indent on
+syntax enable
+syntax on
 
 " When vimrc is edited, reload it
 autocmd! BufWritePost ~/.vimrc source ~/.vimrc
 
-
+set nocompatible
+set backspace=indent,eol,start
 set encoding=utf-8
 set fencs=utf-8,gb2312,gbk     " Sets the default encoding
 set nu
@@ -118,15 +103,15 @@ autocmd FileType * autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespa
 au BufNewFile,BufRead *.tpl set ft=html
 
 " syntastic
-set nocompatible
-filetype off
-let &runtimepath.=',~/.vim/bundle/ale'
-filetype plugin on
+let &runtimepath.=',~/.vim/plugged/ale'
 let g:ale_sign_column_always = 0 " 一般需要实时检查，默认关闭
 let g:ale_lint_on_save = 1 " save file auto check
 let g:ale_lint_on_text_changed = 0 " for ale_lint_on_save = 1
 let g:ale_lint_on_enter = 0 " for ale_lint_on_save = 1
 map <F6> :ALEToggle \| echo 'g:ale_enabled =' g:ale_enabled<CR>
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " YouCompleteMe settings
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
@@ -146,7 +131,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_python_binary_path = 'python'
 map <C-G>  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "  fix .cpp error: ValueError: Still no compile flags, no completions yet.
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 " Vim's autocomplete is excruciatingly slow
 " http://stackoverflow.com/questions/2169645/vims-autocomplete-is-excruciatingly-slow
 set complete-=i
@@ -154,7 +139,6 @@ set complete-=i
 """""""""""""""""""""""""""""""""""""""""""""
 "              Vim UI                       "
 """""""""""""""""""""""""""""""""""""""""""""
-syntax on
 au BufNewFile,BufRead *
 \ set tabstop=4 |
 \ set softtabstop=4 |
