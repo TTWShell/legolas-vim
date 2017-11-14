@@ -37,7 +37,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " show venv、git branch、file
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " enhance za
 Plugin 'tmhedberg/SimpylFold'
@@ -55,7 +57,6 @@ Plugin 'vim-scripts/nginx.vim'
 Plugin 'fatih/vim-go'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'unblevable/quick-scope'
 Plugin 'elzr/vim-json'
 Plugin 'dyng/ctrlsf.vim'
 Plugin 'kylef/apiblueprint.vim'
@@ -150,14 +151,10 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/
 " http://stackoverflow.com/questions/2169645/vims-autocomplete-is-excruciatingly-slow
 set complete-=i
 
-" auto update tagfile when save
-" au BufWritePost *.py silent! :UpdateTags
-
 """""""""""""""""""""""""""""""""""""""""""""
 "              Vim UI                       "
 """""""""""""""""""""""""""""""""""""""""""""
 syntax on
-
 au BufNewFile,BufRead *
 \ set tabstop=4 |
 \ set softtabstop=4 |
@@ -166,10 +163,8 @@ au BufNewFile,BufRead *
 \ set autoindent |
 \ set fileformat=unix |
 \ set list listchars=tab:>-
-
 au BufNewFile,BufRead *.c,*.py
 \ set colorcolumn=80
-
 au BufNewFile,BufRead *.go
 \ set nolist
 
@@ -221,13 +216,31 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
-" for powerline
-set laststatus=2
-set term=xterm-256color
-set termencoding=utf-8
-set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
+" for powerline 已弃用
+" set laststatus=2
+" set term=xterm-256color
+" set termencoding=utf-8
+" set guifont=Ubuntu\ Mono\ derivative\ Powerline:10
 " set guifont=Ubuntu\ Mono
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
+
+" for airline
+" 使用powerline打过补丁的字体
+let g:airline_powerline_fonts = 1
+let g:airline_theme='dark_minimal'
+" 开启tabline
+let g:airline#extensions#tabline#enabled = 1
+" 显示buffer编号
+let g:airline#extensions#tabline#buffer_nr_show = 1
+" tabline中当前buffer两端的分隔字符
+let g:airline#extensions#tabline#left_sep = '🔥'
+" tabline中未激活buffer两端的分隔字符
+let g:airline#extensions#tabline#left_alt_sep = '💦'
+" 关于buffer使用：
+"     :ls 查看buffer
+"     :bn (buffer next)
+"     :bp (buffer previous)
+"     :b <num> 打开编号为num的buffer
 
 " color scheme
 set background=dark        " Assume a dark background
