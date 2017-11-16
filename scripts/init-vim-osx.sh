@@ -5,10 +5,10 @@ function echoo {
 }
 
 echoo ">>> Install cmake using brew ..."
-brew install cmake
+brew list cmake &>/dev/null || brew install cmake
 
 echoo ">>> Install golang using brew ..."
-brew install golang
+brew list golang &>/dev/null || brew install golang
 
 echoo ">>> Install vim using brew ..."
-brew install vim
+brew list vim &>/dev/null || brew install vim
