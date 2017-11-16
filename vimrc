@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugged')
 "           personal plugin start           "
 """""""""""""""""""""""""""""""""""""""""""""
 " async syntax checking plugin for Vim
-Plug 'w0rp/ale'
+Plug 'w0rp/ale', {'tag': 'b934dc5'}
 
 " Highlights trailing whitespace in red and provides
 Plug 'bronson/vim-trailing-whitespace'
