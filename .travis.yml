@@ -6,6 +6,9 @@ os:
   - linux
   - osx
 
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
+
 install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y clang golang; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CXX="g++-4.9" CC="gcc-4.9" GOROOT="/usr/lib/go" GOPATH=$HOME/gocode PATH=$PATH:$GOPATH/bin; fi

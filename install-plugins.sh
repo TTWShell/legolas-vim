@@ -3,24 +3,24 @@
 function install {
     ln -s -f `pwd`/vimrc  $HOME/.vimrc
     touch $HOME/.vimrc.local
-    yes "\n" | sudo vim +PluginClean +qall
-    yes "\n" | sudo vim +PluginInstall +qall
+    yes "" | vim +PluginClean +qall
+    yes "" | vim +PluginInstall +qall
 }
 
 function update {
-    yes "\n" | sudo vim +PluginUpdate +qall
+    yes "" | vim +PluginUpdate +qall
 }
 
 function init {
     echo ">>> Set up Vundle ..."
-    sudo rm -rf ~/.vim/bundle/Vundle.vim
-    sudo git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    rm -rf ~/.vim/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
     pip install flake8  # for vim-flake8
 
     install
 
-    sudo mkdir -p ~/.vim/colors && sudo cp ~/.vim/bundle/vim-colorschemes/colors/* ~/.vim/colors
+    mkdir -p ~/.vim/colors && cp ~/.vim/bundle/vim-colorschemes/colors/* ~/.vim/colors
 
     rebuild --gocode-completer
 }
@@ -28,7 +28,7 @@ function init {
 function rebuild() {
     set -e
     set -o pipefail
-    cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive && sudo ./install.py "$@"
+    cd ~/.vim/bundle/YouCompleteMe && git submodule update --init --recursive && ./install.py "$@"
 }
 
 function usage {

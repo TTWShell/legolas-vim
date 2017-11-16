@@ -54,6 +54,6 @@ case $platform in
         ;;
 esac
 
-sudo bash install-plugins.sh init
+bash install-plugins.sh init
 
 echoo "Install finished. If you need orther language support, please run: ./install-plugins.sh --help"
