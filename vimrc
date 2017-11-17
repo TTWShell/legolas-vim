@@ -109,8 +109,8 @@ let g:ale_lint_on_save = 1 " save file auto check
 let g:ale_lint_on_text_changed = 0 " for ale_lint_on_save = 1
 let g:ale_lint_on_enter = 0 " for ale_lint_on_save = 1
 map <F6> :ALEToggle \| echo 'g:ale_enabled =' g:ale_enabled<CR>
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_error_str = 'Error'
+let g:ale_echo_msg_warning_str = 'Warning'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " YouCompleteMe settings
