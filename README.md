@@ -75,6 +75,18 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 
 8. :w 保存文件可能会慢的情况，F6关闭语法检查。
 
+9. golang第三方库自动补全无效：
+
+    执行vim-go命令 `:GoInstallBinaries`即可修复，可能报错：
+
+        错误信息： vim-go: gogetdoc not found. Installing github.com/zmb3/gogetdoc to folder /usr/local/opt/go/libexec/bin
+        xxx timeout
+
+    可能的原因是PATH配置错误，需要加上$GOPATH/bin。即:
+
+        git clone https://github.com/golang/tools $GOPATH/golang.org/x/tools  # 直接安装gotools
+        export PATH=$GOPATH/bin:$PATH
+
 
 # 快捷键说明
 
