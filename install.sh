@@ -28,7 +28,7 @@ for i in "Centos","Centos" "Ubuntu","Ubuntu" "Darwin","MacOSX"; do
     key=${i%,*}; value=${i#*,};
     if [ `python -mplatform | grep -ic  $key` == 1 ]; then
        platform=$value
-       echoo ">>> You os is $platform."
+       echoo ">>> Your os is $platform."
     fi
 done
 
