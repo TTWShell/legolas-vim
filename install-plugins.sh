@@ -17,7 +17,7 @@ function init {
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-    pip install flake8  # for vim-flake8
+    sudo pip install flake8  # for vim-flake8
 
     install
 
@@ -27,8 +27,6 @@ function init {
 }
 
 function rebuild() {
-    set -e
-    set -o pipefail
     cd ~/.vim/plugged/YouCompleteMe && git submodule update --init --recursive && ./install.py "$@"
 }
 
