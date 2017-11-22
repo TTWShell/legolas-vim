@@ -14,7 +14,7 @@
 
 支持Python自动补全的最好插件是YouCompleteMe。而YouCompleteMe需要比较高版本的vim(>=7.4.143)，所以，需要编译安装vim，参见相关文档[1]。另外还需要一些C库，参见相关文档[2]。
 
-vim扩展管理器使用的是Vundle，参见相关文档[3]。
+vim扩展管理器使用的是异步工具[vim-plug](https://github.com/junegunn/vim-plug)。
 
 由于是为python开发打造。默认安装了pip等py开发必需品。公用开发工具默认安装（brew、zsh等）。
 
@@ -186,6 +186,12 @@ vim扩展管理器使用的是Vundle，参见相关文档[3]。
 | :line**d** | 删除指定行 |
 | :line,line**d** | 删除指定范围内的行 |
 
+
+## 咖啡
+
+收到几个网友请喝咖啡的私信😊😊😊，附上支付宝。
+
+![alipay](alipay.jpg)
 
 # 相关文档
 
