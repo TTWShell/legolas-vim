@@ -25,7 +25,7 @@ function backup {
 
 result=`python -mplatform`
 platform=""
-for i in "Centos","Centos" "Ubuntu","Ubuntu" "Darwin","MacOSX"; do
+for i in "Centos","Centos" "Ubuntu","Ubuntu" "Debian","Debian" "Darwin","MacOSX"; do
     key=${i%,*}; value=${i#*,};
     if [ `grep -ic $key <<< ${result}` == 1 ]; then
        platform=$value
@@ -41,7 +41,7 @@ case $platform in
     Centos)
         sudo bash scripts/init-vim-centos.sh
         ;;
-    Ubuntu)
+    Ubuntu|Debian)
         sudo bash scripts/init-vim-ubuntu.sh
         ;;
     MacOSX)
