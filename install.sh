@@ -23,12 +23,14 @@ function backup {
     echoo ">>> backup finished"
 }
 
+result=`python -mplatform`
 platform=""
-for i in "Centos","Centos" "Ubuntu","Ubuntu" "Darwin","MacOSX"; do
+for i in "Centos","Centos" "Ubuntu","Ubuntu" "Debian","Debian" "Darwin","MacOSX"; do
     key=${i%,*}; value=${i#*,};
-    if [ `python -mplatform | grep -ic  $key` == 1 ]; then
+    if [ `grep -ic $key <<< ${result}` == 1 ]; then
        platform=$value
        echoo ">>> Your os is $platform."
+       break
     fi
 done
 
@@ -39,7 +41,7 @@ case $platform in
     Centos)
         sudo bash scripts/init-vim-centos.sh
         ;;
-    Ubuntu)
+    Ubuntu|Debian)
         sudo bash scripts/init-vim-ubuntu.sh
         ;;
     MacOSX)
@@ -49,7 +51,7 @@ case $platform in
         bash fonts/install-fonts.sh
         ;;
     *)
-        echoo "暂不支持此系统，欲使用此配置，需要先解决依赖安装的问题，欢迎提pr。"
+        echoo "暂不支持此系统，欲使用此配置，需要先解决依赖安装的问题，欢迎提pr。result: ${result}"
         exit 1
         ;;
 esac
