@@ -233,6 +233,7 @@ if has('gui_running')
 else
     colorscheme molokai
 endif
+set t_Co=256
 
 " 自定义代码折叠，折叠（和取消折叠）
 set foldmethod=syntax
