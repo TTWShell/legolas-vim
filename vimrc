@@ -54,6 +54,7 @@ Plug 'hynek/vim-python-pep8-indent'
 Plug 'elzr/vim-json'
 Plug 'dyng/ctrlsf.vim'
 Plug 'kylef/apiblueprint.vim'
+Plug 'leafgarland/typescript-vim'
 
 " A Git wrapper so awesome
 Plug 'tpope/vim-fugitive'
