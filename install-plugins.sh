@@ -27,7 +27,7 @@ function init {
 }
 
 function rebuild() {
-    cd ~/.vim/plugged/YouCompleteMe && git submodule update --init --recursive && ./install.py "$@"
+    cd ~/.vim/plugged/YouCompleteMe && git submodule update --init --recursive && python3 install.py "$@"
 }
 
 function usage {

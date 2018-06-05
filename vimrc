@@ -54,6 +54,7 @@ Plug 'hynek/vim-python-pep8-indent'
 Plug 'elzr/vim-json'
 Plug 'dyng/ctrlsf.vim'
 Plug 'kylef/apiblueprint.vim'
+Plug 'leafgarland/typescript-vim'
 
 " A Git wrapper so awesome
 Plug 'tpope/vim-fugitive'
@@ -128,7 +129,7 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 " let g:ycm_filetype_whitelist = { 'python': 1 }
-let g:ycm_python_binary_path = 'python'
+let g:ycm_python_binary_path = 'python3'
 map <C-G>  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "  fix .cpp error: ValueError: Still no compile flags, no completions yet.
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
@@ -153,7 +154,7 @@ au BufNewFile,BufRead *.go
 \ set nolist
 
 "python with virtualenv support
-py << EOF
+py3 << EOF
 import os
 import sys
 if 'VIRTUAL_ENV' in os.environ:
