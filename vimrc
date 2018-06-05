@@ -24,7 +24,7 @@ Plug 'jnurmine/Zenburn'
 Plug 'flazz/vim-colorschemes'
 
 " best auto complete tool I have ever used(jedi, supertab...)
-Plug 'Valloric/YouCompleteMe', {'tag': '1e38a2b'}
+Plug 'Valloric/YouCompleteMe', {'tag': 'c9ff2177'}
 
 " tree explore plugin
 Plug 'scrooloose/nerdtree'
@@ -129,7 +129,7 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 " let g:ycm_filetype_whitelist = { 'python': 1 }
-let g:ycm_python_binary_path = 'python'
+let g:ycm_python_binary_path = 'python3'
 map <C-G>  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "  fix .cpp error: ValueError: Still no compile flags, no completions yet.
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
@@ -154,7 +154,7 @@ au BufNewFile,BufRead *.go
 \ set nolist
 
 "python with virtualenv support
-py << EOF
+py3 << EOF
 import os
 import sys
 if 'VIRTUAL_ENV' in os.environ:
