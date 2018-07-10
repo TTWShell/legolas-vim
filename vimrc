@@ -154,6 +154,9 @@ au BufNewFile,BufRead *.go
 \ set nolist
 
 "python with virtualenv support
+if has('python3')
+  silent! python3 1
+endif
 py3 << EOF
 import os
 import sys
