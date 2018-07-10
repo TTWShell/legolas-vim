@@ -24,7 +24,7 @@ Plug 'jnurmine/Zenburn'
 Plug 'flazz/vim-colorschemes'
 
 " best auto complete tool I have ever used(jedi, supertab...)
-Plug 'Valloric/YouCompleteMe', {'tag': '1e38a2b'}
+Plug 'Valloric/YouCompleteMe', {'tag': 'e1ead99'}
 
 " tree explore plugin
 Plug 'scrooloose/nerdtree'
@@ -154,6 +154,9 @@ au BufNewFile,BufRead *.go
 \ set nolist
 
 "python with virtualenv support
+if has('python3')
+  silent! python3 1
+endif
 py3 << EOF
 import os
 import sys
