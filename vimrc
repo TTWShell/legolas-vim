@@ -152,6 +152,10 @@ au BufNewFile,BufRead *.c,*.py
 \ set colorcolumn=80
 au BufNewFile,BufRead *.go
 \ set nolist
+au BufNewFile,BufRead *.yml
+\ set tabstop=2 |
+\ set softtabstop=2 |
+\ set shiftwidth=2
 
 "python with virtualenv support
 if has('python3')
