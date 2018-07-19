@@ -116,8 +116,8 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " YouCompleteMe settings
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
-" 输入第0个字符开始补全
-let g:ycm_min_num_of_chars_for_completion=0
+" 输入第1个字符开始补全 @2018-07-19 改为1，否则移动光标会弹出一堆无意义的提示
+let g:ycm_min_num_of_chars_for_completion=1
 " 禁止缓存匹配项,每次都重新生成匹配项
 let g:ycm_cache_omnifunc=0
 " 开启语义补全
