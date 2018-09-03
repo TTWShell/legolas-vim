@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 
 # for ycm
-yum install -y gcc gcc-c++ kernel-devel cmake golang
+yum install -y gcc gcc-c++ kernel-devel cmake golang python-pip python-devel python36 python36-devel \
+    ncurses-devel \
+    perl perl-devel \
+    perl-ExtUtils-Embed \
+    ruby ruby-devel \
+    lua lua-devel
+
+sudo ln -s /usr/bin/python3.6 /usr/bin/python3
 
 sudo yum -y remove vim
 
