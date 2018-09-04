@@ -24,7 +24,7 @@ Plug 'jnurmine/Zenburn'
 Plug 'flazz/vim-colorschemes'
 
 " best auto complete tool I have ever used(jedi, supertab...)
-Plug 'Valloric/YouCompleteMe', {'tag': 'e1ead99'}
+Plug 'Valloric/YouCompleteMe', {'tag': 'e018777'}
 
 " tree explore plugin
 Plug 'scrooloose/nerdtree'
