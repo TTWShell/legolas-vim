@@ -32,7 +32,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " show venv、git branch、file
 " Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline', {'tag': '7190164'}
 Plug 'vim-airline/vim-airline-themes'
 
 " enhance za
