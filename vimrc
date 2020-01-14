@@ -100,9 +100,6 @@ fun! <SID>StripTrailingWhitespaces()
     endfun
 autocmd FileType * autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
-" deal *.tpl
-au BufNewFile,BufRead *.tpl set ft=html
-
 " syntastic
 let &runtimepath.=',~/.vim/plugged/ale'
 let g:ale_sign_column_always = 0 " 一般需要实时检查，默认关闭
@@ -156,6 +153,13 @@ au BufNewFile,BufRead *.yml
 \ set tabstop=2 |
 \ set softtabstop=2 |
 \ set shiftwidth=2
+" deal *.tpl
+au BufNewFile,BufRead *.tpl set ft=html
+"
+augroup filetype
+  au! BufRead,BufNewFile *Makefile* set filetype=make
+augroup END
+autocmd FileType make set noexpandtab
 
 "python with virtualenv support
 if has('python3')
