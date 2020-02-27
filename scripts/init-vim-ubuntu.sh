@@ -20,7 +20,7 @@ echoo ">>> Remove vim if you have it already ..."
 sudo apt-get remove -y vim vim-runtime gvim
 
 echoo ">>> Install vim ..."
-cd ~ && rm -rf vim && git clone https://github.com/vim/vim.git && cd vim && git checkout v8.2.0114
+cd ~ && rm -rf vim && git clone --branch v8.2.0114 --depth=1 https://github.com/vim/vim.git && cd vim
 ./configure --with-features=huge \
     --enable-multibyte \
     --enable-rubyinterp=yes \
