@@ -25,7 +25,7 @@ function backup {
 
 result=`python -mplatform`
 platform=""
-for i in "Centos","Centos" "Ubuntu","Ubuntu" "Debian" "Deepin","Debian" "Darwin","MacOSX"; do
+for i in "Centos","Centos" "Ubuntu","Ubuntu" "Debian" "Deepin","Debian" "Darwin","MacOSX" "macOS","MacOSX"; do
     key=${i%,*}; value=${i#*,};
     if [ `grep -ic $key <<< ${result}` == 1 ]; then
        platform=$value
